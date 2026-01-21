@@ -130,4 +130,105 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
     }
+}/* === Section Packs & Services Premium === */
+.packs-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
 }
+
+.pack-card {
+    flex: 1 1 30%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pack-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pack-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.pack-card p.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.pack-card ul.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.pack-card ul.services-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.pack-card ul.services-list li:last-child {
+    border-bottom: none;
+}
+
+.pack-card .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0a4c6a; /* Couleur premium et professionnelle */
+    margin-top: 15px;
+}
+
+/* Bouton “service supplémentaire” */
+.pack-card a.add-service-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #0a4c6a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.pack-card a.add-service-btn:hover {
+    background-color: #08608a;
+}
+
+/* Coordination ponctuelle */
+.coordination-info {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+    .packs-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pack-card {
+        flex: 1 1 100%;
+    }
+    }
