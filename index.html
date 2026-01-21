@@ -1,91 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmoSérénité | Gestion & Services Immobiliers</title>
 
-  <title>ImmoSérénité | Gestion de biens vacants & assistance immobilière</title>
+    <!-- CSS global -->
+    <link rel="stylesheet" href="global.css">
 
-  <meta name="description" content="ImmoSérénité accompagne les professionnels de l’immobilier et propriétaires dans la gestion de biens vacants, l’assistance immobilière et la préparation à la location.">
-  <meta name="robots" content="index, follow">
-
-  <link rel="stylesheet" href="global.css">
+    <!-- Police élégante (optionnelle, tu peux enlever si besoin) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="header">
-  <div class="container header-container">
-    <div class="logo">
-      <img src="logo1.png" alt="ImmoSérénité - Gestion immobilière professionnelle">
-      <span>ImmoSérénité</span>
-    </div>
-    <nav class="nav">
-      <a href="#">Accueil</a>
-      <a href="#services">Nos services</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+            <img src="logo1.png" alt="ImmoSérénité" class="logo">
 
-<section class="hero" style="background-image: url('index.png');">
-  <div class="hero-overlay"></div>
-  <div class="hero-content container">
-    <h1>Gestion de biens vacants & assistance immobilière professionnelle</h1>
-    <p>Un accompagnement rigoureux et discret pour les professionnels de l’immobilier et les propriétaires.</p>
-    <a href="#contact" class="btn-primary">Demande de devis</a>
-  </div>
-</section>
+            <nav class="nav">
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<section id="services" class="services container">
-  <h2>Nos services</h2>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
 
-  <div class="services-grid">
-    <div class="service-card">
-      <h3>Gestion de logements vacants</h3>
-      <p>Surveillance, visites régulières, coordination des interventions et sécurisation des biens inoccupés.</p>
-    </div>
+        <div class="container hero-content">
+            <h1>Gestion de biens vacants &<br>Services immobiliers pour professionnels</h1>
 
-    <div class="service-card">
-      <h3>Assistance immobilière</h3>
-      <p>Appui opérationnel pour notaires, agences et syndics dans la gestion quotidienne des biens.</p>
-    </div>
+            <p>
+                Votre partenaire de confiance pour la gestion, la surveillance
+                et la valorisation de vos biens immobiliers.
+            </p>
 
-    <div class="service-card">
-      <h3>Préparation à la location</h3>
-      <p>Organisation, contrôle du logement et coordination des actions avant remise sur le marché.</p>
-    </div>
-  </div>
-</section>
+            <a href="#services" class="btn-primary">Découvrir nos services</a>
+        </div>
+    </section>
 
-<section id="apropos" class="about">
-  <div class="container">
-    <h2>Pourquoi ImmoSérénité</h2>
-    <ul class="about-list">
-      <li>Interlocuteur unique et dédié</li>
-      <li>Présence locale et réactivité</li>
-      <li>Suivi documenté et transparent</li>
-      <li>Discrétion et neutralité professionnelle</li>
-      <li>Vision long terme des biens confiés</li>
-    </ul>
-  </div>
-</section>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="container">
 
-<section id="contact" class="cta">
-  <div class="container">
-    <h2>Un besoin ponctuel ou récurrent ?</h2>
-    <p>Contactez-nous pour une étude personnalisée et confidentielle.</p>
-    <a href="#" class="btn-primary">Demander un devis</a>
-  </div>
-</section>
+            <h2 class="section-title">Nos services</h2>
 
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 ImmoSérénité — Tous droits réservés</p>
-    <p>Gestion de biens vacants & assistance immobilière</p>
-  </div>
-</footer>
+            <div class="services-grid">
+
+                <!-- Carte 1 -->
+                <a href="gestion-logements.html" class="service-card">
+                    <h3>Gestion de logements vacants</h3>
+                    <p>
+                        Surveillance, visites régulières, coordination des interventions
+                        et sécurisation des biens inoccupés.
+                    </p>
+                    <span class="service-link">Découvrir →</span>
+                </a>
+
+                <!-- Carte 2 -->
+                <a href="assistance-immobiliere.html" class="service-card">
+                    <h3>Assistance immobilière</h3>
+                    <p>
+                        Appui opérationnel pour notaires, agences et syndics
+                        dans la gestion quotidienne des biens.
+                    </p>
+                    <span class="service-link">Découvrir →</span>
+                </a>
+
+                <!-- Carte 3 -->
+                <a href="preparation-location.html" class="service-card">
+                    <h3>Préparation à la location</h3>
+                    <p>
+                        Organisation, contrôle du logement et coordination des actions
+                        avant remise sur le marché.
+                    </p>
+                    <span class="service-link">Découvrir →</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Besoin d’un accompagnement sur mesure ?</h2>
+            <a href="#contact" class="btn-secondary">Demande de devis</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <p>© 2026 ImmoSérénité – Tous droits réservés</p>
+            <p>Contact : contact@immoserenite.fr</p>
+        </div>
+    </footer>
 
 </body>
-    </html>
+</html>
