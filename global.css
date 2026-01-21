@@ -34,8 +34,8 @@
 }
 
 .hero-overlay h1 {
-    font-size: 2em;
-    max-width: 800px;
+    font-size: 1.8em; /* un peu plus petit que 2em */
+    max-width: 750px; /* réduit légèrement la largeur max */
     line-height: 1.3;
 }
 
