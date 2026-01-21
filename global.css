@@ -1,233 +1,168 @@
-/* Reset basique */
+/* RESET & BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-
 body {
-    color: #1c1c1c;
-    background-color: #fff;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-/* Header */
-header {
+/* HEADER */
+header.hero {
     position: relative;
-    height: 80vh;
-    background: url('index.png') no-repeat center center/cover;
+    width: 100%;
+    height: 60vh;
+    background: url('header-bg.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+header.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.45);
+}
+header.hero .hero-overlay {
+    position: relative;
     text-align: center;
+    color: #fff;
+    max-width: 900px;
+    padding: 0 20px;
+}
+header.hero .hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+header.hero .hero-overlay p {
+    font-size: 1.2rem;
+}
+
+/* CONTAINER PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 50px auto;
     padding: 0 20px;
 }
 
-.header-content {
-    background-color: rgba(0,0,0,0.35);
-    padding: 40px 20px;
-    border-radius: 10px;
-}
-
-header .logo {
-    max-width: 180px;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-header .btn-primary {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #d4a23c;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-header .btn-primary:hover {
-    background-color: #b3882d;
-}
-
-/* Services */
-.services-section {
+/* BLOC SERVICES */
+.services-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
-    gap: 20px;
-    padding: 60px 20px;
 }
-
 .service-card {
     position: relative;
     width: 300px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+    min-height: 400px;
+    border-radius: 15px;
     overflow: hidden;
-    text-decoration: none;
-    color: #fff;
-    transition: transform 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
-
 .service-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
-
-.service-card .overlay {
-    position: absolute;
-    bottom: 0;
+.service-card img {
     width: 100%;
-    height: 100%;
-    background: rgba(28,28,28,0.55);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
 }
-
-.service-card h2 {
-    font-size: 1.4rem;
+.service-card .content {
+    padding: 20px;
+}
+.service-card h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
-
 .service-card p {
-    font-size: 0.9rem;
-}
-
-/* Footer */
-footer {
-    background-color: #1c2a48;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-footer a {
-    color: #d4a23c;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-    .services-section {
-        flex-direction: column;
-        align-items: center;
-    }
-}/* === Section Packs & Services Premium === */
-.packs-section {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.pack-card {
-    flex: 1 1 30%;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    padding: 30px 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.pack-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.pack-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #1a1a1a;
-    font-weight: 600;
-}
-
-.pack-card p.description {
     font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    color: #555;
 }
-
-.pack-card ul.services-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-.pack-card ul.services-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 0.95rem;
-    color: #333;
-}
-
-.pack-card ul.services-list li:last-child {
-    border-bottom: none;
-}
-
-.pack-card .price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0a4c6a; /* Couleur premium et professionnelle */
-    margin-top: 15px;
-}
-
-/* Bouton “service supplémentaire” */
-.pack-card a.add-service-btn {
+.service-card .btn {
     display: inline-block;
-    padding: 12px 20px;
-    background-color: #0a4c6a;
+    padding: 10px 20px;
+    background-color: #2a7ae2;
     color: #fff;
-    text-decoration: none;
     border-radius: 8px;
-    font-weight: 500;
-    text-align: center;
-    margin-top: auto;
     transition: background-color 0.3s ease;
 }
-
-.pack-card a.add-service-btn:hover {
-    background-color: #08608a;
+.service-card .btn:hover {
+    background-color: #1f5cbf;
 }
 
-/* Coordination ponctuelle */
-.coordination-info {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #666;
-    margin-top: 10px;
+/* PACKS */
+.pack {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.pack h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.pack ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.pack li {
+    margin-bottom: 8px;
+}
+.pack span.price {
+    font-weight: bold;
+    color: #2a7ae2;
 }
 
-/* Responsive mobile */
-@media (max-width: 900px) {
-    .packs-section {
-        flex-direction: column;
-        gap: 20px;
+/* SERVICES HORS PACK */
+.extra-services {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.extra-services h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .services-container {
+        justify-content: center;
     }
-    .pack-card {
-        flex: 1 1 100%;
+}
+@media (max-width: 768px) {
+    header.hero {
+        height: 50vh;
+    }
+    header.hero .hero-overlay h1 {
+        font-size: 2.2rem;
+    }
+    header.hero .hero-overlay p {
+        font-size: 1rem;
+    }
     }
