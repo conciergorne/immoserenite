@@ -1,158 +1,141 @@
-/* === GLOBAL RESET === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
+/* ===========================
+   BASE
+=========================== */
 body {
-    background-color: #f8f8f8;
-    color: #1f2a44;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* === HEADER === */
-header {
-    width: 100%;
-    background-color: #1f2a44;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+h1, h2, h3 {
+    color: #1a3e5c;
 }
 
-header img {
-    height: 60px; /* taille adaptée */
-}
-
-header nav a {
-    color: white;
+a {
     text-decoration: none;
-    margin-left: 24px;
-    font-weight: 500;
+    color: inherit;
 }
 
-header nav a:hover {
-    color: #c9a24d; /* doré */
-}
-
-/* === HERO SECTION === */
+/* ===========================
+   HERO
+=========================== */
 .hero {
-    width: 100%;
-    height: 85vh;
-    background: url('index.png') center/cover no-repeat;
+    position: relative;
+    height: 280px;
+    max-height: 320px;
+    min-height: 250px;
+    overflow: hidden;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
-    color: white;
-    padding: 0 20px;
+    padding: 20px;
 }
 
-.hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    max-width: 800px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 700px;
-}
-
-.hero button {
-    padding: 12px 28px;
-    background-color: #c9a24d;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hero button:hover {
-    background-color: #b38b45;
-}
-
-/* === SERVICES === */
-.services {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin: 60px 20px;
-    gap: 20px;
-}
-
-.service-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 24px;
-    flex: 1 1 300px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    text-decoration: none;
-    color: #1f2a44;
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
-}
-
-.service-card h2 {
-    font-size: 1.3rem;
+.hero-logo {
+    width: 90px;
     margin-bottom: 12px;
 }
 
+.hero-slogan {
+    color: #fff;
+    font-size: 1.2em;
+    max-width: 500px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* ===========================
+   BLOC SERVICES
+=========================== */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
 .service-card p {
-    font-size: 1rem;
+    color: #555;
+    font-size: 0.95em;
     line-height: 1.5;
 }
 
-/* === FOOTER === */
+/* ===========================
+   FOOTER
+=========================== */
 footer {
-    width: 100%;
-    background-color: #1f2a44;
-    color: white;
+    background: #1a3e5c;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px 20px;
+    font-size: 0.9em;
 }
 
-footer a {
-    color: #c9a24d;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* === MEDIA QUERIES === */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .hero p {
-        font-size: 1rem;
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 992px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 12px 20px;
+    .hero {
+        height: 200px;
     }
-    .services {
-        flex-direction: column;
-        margin: 40px 10px;
+
+    .hero-logo {
+        width: 70px;
+    }
+
+    .hero-slogan {
+        font-size: 1em;
+        max-width: 280px;
     }
 }
