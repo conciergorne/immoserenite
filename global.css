@@ -1,141 +1,42 @@
-/* ===========================
-   BASE
-=========================== */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-h1, h2, h3 {
-    color: #1a3e5c;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ===========================
-   HERO
-=========================== */
 .hero {
     position: relative;
-    height: 280px;
-    max-height: 320px;
-    min-height: 250px;
-    overflow: hidden;
+    width: 100%;
+    height: 400px; /* header plus grand */
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    object-fit: cover; /* couvre toute la zone sans déformer */
+    z-index: 1;
 }
 
 .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    z-index: 2;
     text-align: center;
-    padding: 20px;
+    color: #fff;
+    background: rgba(0,0,0,0.35); /* superposition semi-transparente */
+    padding: 20px 15px;
+    border-radius: 8px;
 }
 
 .hero-logo {
-    width: 90px;
-    margin-bottom: 12px;
+    width: 100px;
+    margin-bottom: 15px;
 }
 
 .hero-slogan {
-    color: #fff;
-    font-size: 1.2em;
-    max-width: 500px;
+    font-size: 1.3em;
     line-height: 1.4;
     font-weight: 500;
-}
-
-/* ===========================
-   BLOC SERVICES
-=========================== */
-.services-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: 40px auto;
-    max-width: 1200px;
-    padding: 0 20px;
-}
-
-.service-card {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    padding: 25px;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.service-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.3em;
-}
-
-.service-card p {
-    color: #555;
-    font-size: 0.95em;
-    line-height: 1.5;
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-footer {
-    background: #1a3e5c;
-    color: #fff;
-    text-align: center;
-    padding: 25px 20px;
-    font-size: 0.9em;
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-@media (max-width: 992px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        height: 200px;
-    }
-
-    .hero-logo {
-        width: 70px;
-    }
-
-    .hero-slogan {
-        font-size: 1em;
-        max-width: 280px;
-    }
+    max-width: 600px;
+    margin: 0 auto;
 }
