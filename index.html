@@ -3,103 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImmoSérénité | Gestion & Services Immobiliers</title>
-
-    <!-- CSS global -->
+    <title>ImmoSérénité | Gestion de Biens Vacants & Services Immobiliers</title>
     <link rel="stylesheet" href="global.css">
-
-    <!-- Police élégante (optionnelle, tu peux enlever si besoin) -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container header-content">
-            <img src="logo1.png" alt="ImmoSérénité" class="logo">
+<!-- HEADER -->
+<header>
+    <img src="logo1.png" alt="Logo ImmoSérénité">
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-            <nav class="nav">
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+<!-- HERO -->
+<section class="hero">
+    <h1>Gestion de Biens Vacants & Services Immobiliers pour Professionnels</h1>
+    <p>Votre partenaire de confiance pour la gestion, la surveillance et la valorisation de vos biens immobiliers.</p>
+    <button onclick="window.location.href='#services'">Découvrir nos services</button>
+</section>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
+<!-- SERVICES -->
+<section class="services" id="services">
+    <a href="gestion-logements.html" class="service-card">
+        <h2>Gestion de logements vacants</h2>
+        <p>Surveillance, visites régulières, coordination des interventions et sécurisation des biens inoccupés.</p>
+    </a>
 
-        <div class="container hero-content">
-            <h1>Gestion de biens vacants &<br>Services immobiliers pour professionnels</h1>
+    <a href="assistance-immobiliere.html" class="service-card">
+        <h2>Assistance immobilière</h2>
+        <p>Appui opérationnel pour notaires, agences et syndics dans la gestion quotidienne des biens.</p>
+    </a>
 
-            <p>
-                Votre partenaire de confiance pour la gestion, la surveillance
-                et la valorisation de vos biens immobiliers.
-            </p>
+    <a href="preparation-location.html" class="service-card">
+        <h2>Préparation à la location</h2>
+        <p>Organisation, contrôle du logement et coordination des actions avant remise sur le marché.</p>
+    </a>
+</section>
 
-            <a href="#services" class="btn-primary">Découvrir nos services</a>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="services">
-        <div class="container">
-
-            <h2 class="section-title">Nos services</h2>
-
-            <div class="services-grid">
-
-                <!-- Carte 1 -->
-                <a href="gestion-logements.html" class="service-card">
-                    <h3>Gestion de logements vacants</h3>
-                    <p>
-                        Surveillance, visites régulières, coordination des interventions
-                        et sécurisation des biens inoccupés.
-                    </p>
-                    <span class="service-link">Découvrir →</span>
-                </a>
-
-                <!-- Carte 2 -->
-                <a href="assistance-immobiliere.html" class="service-card">
-                    <h3>Assistance immobilière</h3>
-                    <p>
-                        Appui opérationnel pour notaires, agences et syndics
-                        dans la gestion quotidienne des biens.
-                    </p>
-                    <span class="service-link">Découvrir →</span>
-                </a>
-
-                <!-- Carte 3 -->
-                <a href="preparation-location.html" class="service-card">
-                    <h3>Préparation à la location</h3>
-                    <p>
-                        Organisation, contrôle du logement et coordination des actions
-                        avant remise sur le marché.
-                    </p>
-                    <span class="service-link">Découvrir →</span>
-                </a>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <h2>Besoin d’un accompagnement sur mesure ?</h2>
-            <a href="#contact" class="btn-secondary">Demande de devis</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer" id="contact">
-        <div class="container footer-content">
-            <p>© 2026 ImmoSérénité – Tous droits réservés</p>
-            <p>Contact : contact@immoserenite.fr</p>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer id="contact">
+    <p>© 2026 ImmoSérénité — Tous droits réservés | <a href="mailto:contact@immoserenite.fr">Contactez-nous</a></p>
+</footer>
 
 </body>
 </html>
