@@ -1,99 +1,46 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImmoSérénité | Gestion de Location & Assistant Immobilier</title>
-    <meta name="description" content="ImmoSérénité propose une gestion professionnelle de location et services d'assistant immobilier pour notaires, agences et propriétaires à Bagnoles-de-l'Orne et alentours.">
-    <link rel="stylesheet" href="global.css">
-</head>
-<body>
+<!-- Section Tarification -->
+<section class="pricing">
+    <h2>Nos Packs et Services</h2>
+    <p>Découvrez nos offres adaptées à vos besoins. Tous nos packs sont mensuels.</p>
 
-<!-- HERO -->
-<header class="hero" style="background-image: url('location.png');">
-    <div class="hero-content">
-        <img src="logo1.png" alt="Logo ImmoSérénité" class="logo" style="width:150px;margin-bottom:20px;">
-        <h1>Gestion de Location & Assistant Immobilier</h1>
-        <p>Votre partenaire de confiance pour gérer et valoriser vos biens, rapidement et efficacement.</p>
+    <!-- Packs mensuels -->
+    <div class="pricing-cards">
+        <div class="card">
+            <h3>Pack Léger</h3>
+            <p>Surveillance régulière, rapports hebdomadaires, gestion des entrées/sorties.</p>
+            <p class="price">290 €/mois</p>
+        </div>
+        <div class="card">
+            <h3>Pack Complet</h3>
+            <p>Pack Léger + suivi travaux, coordination avec prestataires, optimisation du logement.</p>
+            <p class="price">590 €/mois</p>
+        </div>
     </div>
-</header>
 
-<main>
-    <!-- Présentation des packs -->
-    <section class="packs" style="padding:60px 20px; max-width:1200px; margin:0 auto;">
-        <h2 style="text-align:center; margin-bottom:40px; font-size:2.5rem;">Nos offres</h2>
-        <div class="pack-container" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+    <!-- Coordination ponctuelle -->
+    <div class="additional-service">
+        <h3>Coordination ponctuelle</h3>
+        <p>Gestion et suivi ponctuel de votre bien ou travaux spécifiques. Tarif : 10% du montant des travaux ou prestations réalisées.</p>
+    </div>
 
-            <!-- Pack Léger -->
-            <div class="pack" style="background:#fff; flex:1 1 300px; max-width:350px; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
-                <h3>Pack Léger</h3>
-                <p>Suivi ponctuel, coordination simple, rapports mensuels.</p>
-                <ul>
-                    <li>Coordination des visites et états des lieux</li>
-                    <li>Rapports simplifiés</li>
-                    <li>Assistance administrative</li>
-                </ul>
-                <p style="font-weight:bold; font-size:1.2rem;">290 €</p>
-                <a href="contact.html" class="btn" style="display:inline-block; padding:10px 20px; background:#003366; color:#fff; border-radius:6px; margin-top:15px;">Demander un devis</a>
-            </div>
+    <!-- Forfait dossier / agence -->
+    <div class="additional-service">
+        <h3>Forfait dossier succession</h3>
+        <p>Prise en charge complète du dossier, liaison avec notaire et parties prenantes. Prix sur devis.</p>
 
-            <!-- Pack Complet -->
-            <div class="pack" style="background:#fff; flex:1 1 300px; max-width:350px; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.15);">
-                <h3>Pack Complet</h3>
-                <p>Gestion complète, coordination travaux, rapports détaillés.</p>
-                <ul>
-                    <li>Suivi intégral des locations</li>
-                    <li>Coordination des réparations et travaux</li>
-                    <li>Rapports détaillés et conseils personnalisés</li>
-                </ul>
-                <p style="font-weight:bold; font-size:1.2rem;">590 €</p>
-                <a href="contact.html" class="btn" style="display:inline-block; padding:10px 20px; background:#003366; color:#fff; border-radius:6px; margin-top:15px;">Demander un devis</a>
-            </div>
+        <h3>Forfait agence (mensuel)</h3>
+        <p>Gestion de biens pour agences immobilières, reporting et suivi mensuel. Prix sur devis.</p>
+    </div>
 
-            <!-- Coordination ponctuelle -->
-            <div class="pack" style="background:#fff; flex:1 1 300px; max-width:350px; padding:30px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
-                <h3>Coordination Ponctuelle</h3>
-                <p>Pour besoins spécifiques ou interventions ponctuelles.</p>
-                <ul>
-                    <li>Gestion à la carte</li>
-                    <li>Coordination travaux ou visites</li>
-                    <li>Facturation claire et transparente</li>
-                </ul>
-                <p style="font-weight:bold; font-size:1.2rem;">10 % du montant des interventions</p>
-                <a href="contact.html" class="btn" style="display:inline-block; padding:10px 20px; background:#003366; color:#fff; border-radius:6px; margin-top:15px;">Nous contacter</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Valeur ajoutée -->
-    <section class="avantages" style="padding:60px 20px; background:#f0f2f5;">
-        <h2 style="text-align:center; margin-bottom:40px; font-size:2rem;">Pourquoi choisir ImmoSérénité ?</h2>
-        <div class="avantage-container" style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center; max-width:1200px; margin:0 auto;">
-            <div style="flex:1 1 250px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.05); text-align:center;">
-                <h3>Expertise professionnelle</h3>
-                <p>Une équipe qualifiée pour gérer vos biens avec précision et fiabilité.</p>
-            </div>
-            <div style="flex:1 1 250px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.05); text-align:center;">
-                <h3>Gain de temps</h3>
-                <p>Nous prenons en charge toutes les tâches chronophages pour vous.</p>
-            </div>
-            <div style="flex:1 1 250px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.05); text-align:center;">
-                <h3>Transparence</h3>
-                <p>Suivi clair, facturation transparente et rapports détaillés.</p>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer style="background:#003366; color:#fff; padding:20px; text-align:center;">
-    <p>&copy; 2026 ImmoSérénité — Tous droits réservés</p>
-    <p>
-        <a href="mentions-legales.html" style="color:#fff;">Mentions légales</a> |
-        <a href="cgv.html" style="color:#fff;">CGV</a>
-    </p>
-</footer>
-
-</body>
-                  </html>
+    <!-- Services hors pack -->
+    <div class="additional-service">
+        <h3>Services supplémentaires à la carte</h3>
+        <ul>
+            <li>Home staging léger / préparation location</li>
+            <li>Gestion de location ponctuelle</li>
+            <li>Suivi et accompagnement administratif</li>
+            <li>Contrôle et maintenance du logement</li>
+        </ul>
+        <p>Chaque service est facturé individuellement selon prestation.</p>
+    </div>
+</section>
