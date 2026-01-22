@@ -8,57 +8,90 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="nav-container">
-      <a href="index.html"><img src="logo1.png" alt="Logo ImmoSérénité" class="logo"></a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="gestion-locative.html">Gestion locative</a></li>
-        <li><a href="logements-vacants.html">Logements vacants</a></li>
-        <li><a href="coordination.html">Coordination</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <img src="index.png" alt="Header Image" class="hero-image">
-      <div class="hero-text">
-        <h1>La gestion immobilière en toute sérénité</h1>
-        <p>Un relais de confiance pour propriétaires, agences immobilières et études notariales.</p>
-      </div>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo1.png" alt="ImmoSérénité Logo"></a>
     </div>
-  </header>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="gestion-locative.html">Gestion locative</a></li>
+      <li><a href="logements-vacants.html">Logements vacants</a></li>
+      <li><a href="coordination.html">Coordination</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>La gestion immobilière en toute sérénité</h1>
+    <p>Un relais de confiance pour propriétaires, agences immobilières et études notariales.</p>
+    <a href="gestion-locative.html" class="btn">Découvrir</a>
+  </section>
 
   <!-- SERVICES -->
   <section class="services">
-    <a href="gestion-locative.html" class="service-card">
-      <img src="location.png" alt="Gestion locative">
-      <div class="service-text">
-        <h2>Gestion de location</h2>
-        <p>Optimisez vos locations avec un suivi professionnel.</p>
+    <div class="service-card">
+      <img src="location.png" alt="Gestion de location">
+      <div class="content">
+        <h3>Gestion de location</h3>
+        <p>Optimisez vos locations saisonnières et long terme avec un suivi professionnel et transparent.</p>
       </div>
-    </a>
+    </div>
 
-    <a href="logements-vacants.html" class="service-card">
+    <div class="service-card">
       <img src="vacant.png" alt="Logements vacants">
-      <div class="service-text">
-        <h2>Logements vacants</h2>
-        <p>Surveillez, entretenez et valorisez vos biens inoccupés avec sérénité.</p>
+      <div class="content">
+        <h3>Logements vacants</h3>
+        <p>Surveillez, entretenez et valorisez vos biens inoccupés pour préserver leur valeur et anticiper toute dégradation.</p>
       </div>
-    </a>
+    </div>
 
-    <a href="gestion-biens.html" class="service-card">
-      <img src="gestion.png" alt="Gestion de biens">
-      <div class="service-text">
-        <h2>Gestion de biens</h2>
-        <p>Suivi complet de votre patrimoine immobilier avec accompagnement dédié.</p>
+    <div class="service-card">
+      <img src="gestion.png" alt="Coordination">
+      <div class="content">
+        <h3>Coordination</h3>
+        <p>Coordination ponctuelle ou régulière pour tous vos besoins de maintenance et interventions sur site.</p>
       </div>
-    </a>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 ImmoSérénité – Tous droits réservés</p>
+    &copy; 2026 ImmoSérénité. Tous droits réservés.
   </footer>
+
+  <!-- SCRIPT MENU & ANIMATIONS -->
+  <script>
+    // Toggle menu hamburger
+    function toggleMenu() {
+      const navList = document.querySelector('nav ul');
+      if(navList.style.display === 'flex'){
+        navList.style.display = 'none';
+      } else {
+        navList.style.display = 'flex';
+        navList.style.flexDirection = 'column';
+      }
+    }
+
+    // Animation fade-in pour services
+    const cards = document.querySelectorAll('.service-card');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
