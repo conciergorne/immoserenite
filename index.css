@@ -15,8 +15,8 @@ body {
 
 .hero {
     position: relative;
-    height: 85vh;
-    background: url('hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    background: url('index.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
@@ -49,7 +49,7 @@ body {
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     opacity: 0.9;
 }
 
@@ -57,7 +57,7 @@ body {
 
 .services {
     max-width: 1200px;
-    margin: -100px auto 120px;
+    margin: -120px auto 120px;
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -118,7 +118,7 @@ body {
     font-weight: 500;
     border-radius: 30px;
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -130,7 +130,7 @@ body {
 
 .signature {
     max-width: 900px;
-    margin: 0 auto 120px;
+    margin: 0 auto 100px;
     padding: 0 20px;
     text-align: center;
 }
@@ -146,6 +146,33 @@ body {
     color: #444;
 }
 
+/* CREDIBILITY */
+
+.credibility {
+    background: #ffffff;
+    padding: 80px 20px;
+}
+
+.credibility-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.credibility h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.credibility p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
 /* FOOTER */
 
 .footer {
@@ -154,4 +181,48 @@ body {
     text-align: center;
     padding: 30px 20px;
     font-size: 0.9rem;
+}
+
+/* MICRO-ANIMATIONS */
+
+.fade-in {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 0.9s ease forwards;
+}
+
+.reveal:nth-child(2) { animation-delay: 0.2s; }
+.reveal:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE ULTRA FINE */
+
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .services {
+        margin-top: -80px;
+    }
+
+    .service-card {
+        height: 380px;
+    }
 }
