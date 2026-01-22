@@ -2,85 +2,70 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>ImmoSérénité | Gestion immobilière premium</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmoSérénité</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="header">
+<!-- NAVIGATION -->
+<header class="nav-container">
+    <img src="logo1.png" alt="ImmoSérénité" class="logo">
 
-    <!-- NAVIGATION PREMIUM -->
-    <div class="nav-container">
-        <img src="logo1.png" alt="ImmoSérénité" class="logo">
-
-        <nav class="nav">
-            <a href="index.html" class="active">Accueil</a>
-            <a href="gestion-location.html">Gestion locative</a>
-            <a href="logements-vacants.html">Logements vacants</a>
-            <a href="coordination.html">Coordination</a>
-            <a href="contact.html" class="nav-cta">Contact</a>
-        </nav>
-    </div>
-
-    <!-- HERO VISUEL -->
-    <div class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>La gestion immobilière<br>en toute sérénité</h1>
-            <p>
-                Un relais de confiance pour propriétaires,
-                agences immobilières et études notariales.
-            </p>
-        </div>
-    </div>
-
+    <nav class="nav">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="gestion-location.html">Gestion locative</a>
+        <a href="logements-vacants.html">Logements vacants</a>
+        <a href="coordination.html">Coordination</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
 </header>
 
-<section class="intro">
-    <h2>Une approche rigoureuse et humaine</h2>
-    <p>
-        ImmoSérénité accompagne la gestion, la surveillance et la valorisation
-        des biens immobiliers avec une exigence professionnelle constante.
-        Chaque intervention est documentée, tracée et réalisée en toute transparence.
-    </p>
+<!-- HEADER -->
+<section class="hero">
+    <div class="hero-overlay">
+        <img src="logo1.png" alt="ImmoSérénité" class="hero-logo">
+
+        <h1>La gestion immobilière<br>en toute sérénité</h1>
+
+        <p>
+            Un relais de confiance pour propriétaires,<br>
+            agences immobilières et études notariales.
+        </p>
+    </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
 
-    <article class="service-card" style="background-image:url('location.png')">
-        <div class="service-overlay"></div>
-        <div class="service-content">
-            <h3>Gestion de location</h3>
-            <p>Suivi quotidien, coordination terrain et reporting précis.</p>
-            <a href="gestion-location.html">Découvrir</a>
+    <a href="gestion-location.html" class="service-card" style="background-image:url('location.png')">
+        <div class="service-overlay">
+            <h2>Gestion de location</h2>
+            <p>Gestion quotidienne, coordination et suivi de vos biens loués.</p>
+            <span class="btn">Découvrir</span>
         </div>
-    </article>
+    </a>
 
-    <article class="service-card" style="background-image:url('vacant.png')">
-        <div class="service-overlay"></div>
-        <div class="service-content">
-            <h3>Logements vacants</h3>
-            <p>Sécurisation, surveillance et préservation patrimoniale.</p>
-            <a href="logements-vacants.html">Découvrir</a>
+    <a href="logements-vacants.html" class="service-card" style="background-image:url('vacant.png')">
+        <div class="service-overlay">
+            <h2>Logements vacants</h2>
+            <p>Surveillance, entretien et sécurisation de biens inoccupés.</p>
+            <span class="btn">Découvrir</span>
         </div>
-    </article>
+    </a>
 
-    <article class="service-card" style="background-image:url('gestion.png')">
-        <div class="service-overlay"></div>
-        <div class="service-content">
-            <h3>Coordination & suivi</h3>
-            <p>Interface fiable entre propriétaires, artisans et notaires.</p>
-            <a href="coordination.html">Découvrir</a>
+    <a href="coordination.html" class="service-card" style="background-image:url('gestion.png')">
+        <div class="service-overlay">
+            <h2>Gestion de biens</h2>
+            <p>Coordination, suivi et valorisation de votre patrimoine.</p>
+            <span class="btn">Découvrir</span>
         </div>
-    </article>
+    </a>
 
 </section>
 
-<footer class="footer">
-    <p>© ImmoSérénité — Gestion immobilière indépendante</p>
+<footer>
+    © 2026 ImmoSérénité — Tous droits réservés
 </footer>
 
 </body>
