@@ -1,14 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f6f7;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
 /* HERO */
+
 .hero {
     position: relative;
     height: 85vh;
-    background: url("index.png") center/cover no-repeat;
+    background: url('hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
-.hero .overlay {
+.hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.55);
@@ -16,70 +31,63 @@
 
 .hero-content {
     position: relative;
-    text-align: center;
+    z-index: 2;
     color: #fff;
     max-width: 900px;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-.hero-content img {
-    width: 150px;
+.hero-logo {
+    max-width: 140px;
     margin-bottom: 30px;
 }
 
-.hero-content h1 {
-    font-size: 3.2rem;
+.hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
-.hero-content p {
-    font-size: 1.25rem;
-    opacity: 0.95;
-}
-
-/* MAIN */
-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 90px 20px;
-}
-
-section {
-    margin-bottom: 90px;
-}
-
-h2 {
-    font-size: 2.1rem;
-    margin-bottom: 25px;
-}
-
-/* INTRO */
-.intro p {
+.hero p {
     font-size: 1.1rem;
-    max-width: 900px;
+    opacity: 0.9;
 }
 
 /* SERVICES */
+
 .services {
+    max-width: 1200px;
+    margin: -100px auto 120px;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .service-card {
     position: relative;
     height: 420px;
-    border-radius: 18px;
+    border-radius: 22px;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.2);
 }
 
 .service-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.25)
+    );
 }
 
 .service-content {
@@ -87,78 +95,63 @@ h2 {
     bottom: 0;
     padding: 30px;
     color: #fff;
+    z-index: 2;
 }
 
-.service-content h3 {
+.service-content h2 {
     font-size: 1.6rem;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 .service-content p {
-    font-size: 1rem;
-    margin-bottom: 18px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
 }
 
-.service-content a {
+.btn {
     display: inline-block;
-    padding: 12px 26px;
+    padding: 12px 28px;
     background: #ffffff;
-    color: #0a4c6a;
-    font-weight: 600;
-    border-radius: 8px;
+    color: #1a1a1a;
+    font-weight: 500;
+    border-radius: 30px;
     text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* ENGAGEMENTS */
-.engagement-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+.btn:hover {
+    background: #e6e6e6;
+    transform: translateY(-2px);
 }
 
-.engagement-grid div {
-    background: #fff;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
+/* SIGNATURE */
 
-.engagement-grid h4 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-/* CTA */
-.cta {
-    background: #0a4c6a;
-    color: #fff;
-    padding: 70px;
-    border-radius: 20px;
+.signature {
+    max-width: 900px;
+    margin: 0 auto 120px;
+    padding: 0 20px;
     text-align: center;
 }
 
-.cta a {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 34px;
-    background: #fff;
-    color: #0a4c6a;
+.signature h3 {
+    font-size: 2rem;
     font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
+    margin-bottom: 25px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
+.signature p {
+    font-size: 1rem;
+    color: #444;
+}
 
-    main {
-        padding: 60px 15px;
-    }
+/* FOOTER */
 
-    .cta {
-        padding: 50px 25px;
-    }
-  }
+.footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}
