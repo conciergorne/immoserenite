@@ -1,98 +1,212 @@
-/* RESET */
+/* ===============================
+   RESET
+=============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* GLOBAL */
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
-  overflow-x: hidden; /* empêche le scroll horizontal */
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.6;
+  overflow-x: hidden; /* empêche le scroll horizontal sur mobile */
 }
 
-/* HERO */
-.hero {
-  background: url('index.png') center center/cover no-repeat;
-  text-align: center;
-  color: #fff;
-  padding: 60px 20px;
+/* ===============================
+   NAVIGATION
+=============================== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 100%;
-}
-
-.hero h1 {
-  font-size: 2rem;
-}
-
-.hero p {
-  font-size: 1rem;
-  margin: 10px 0 20px 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  font-size: 1rem;
-  border-radius: 6px;
-}
-
-/* SERVICES */
-.services {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px 20px;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.service-card {
-  width: 100%;
-  max-width: 350px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.5s ease;
+nav .logo img {
+  height: 50px;
 }
 
-.service-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-/* NAVIGATION MOBILE */
 nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #c59d5f;
 }
 
 nav .hamburger {
   display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+nav .hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+/* ===============================
+   HERO
+=============================== */
+.hero {
+  width: 100%;
+  min-height: 90vh;
+  background: url('index.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 120px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+  animation: fadeInUp 1.3s ease forwards;
+  opacity: 0;
+}
+
+.hero .btn {
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1.6s ease forwards;
+  opacity: 0;
+}
+
+.hero .btn:hover {
+  background-color: #c59d5f;
+  color: #fff;
+}
+
+/* ===============================
+   SERVICES / CARDS
+=============================== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 60px 5%;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card .content {
+  padding: 20px;
+}
+
+.service-card .content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-card .content p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* ===============================
+   FOOTER
+=============================== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #777;
+  background-color: #f5f5f5;
+}
+
+/* ===============================
+   ANIMATIONS
+=============================== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ===============================
+   MEDIA QUERIES MOBILE
+=============================== */
+@media screen and (max-width: 1024px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
 }
 
 @media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-  nav .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .hero p {
-    font-size: 0.9rem;
-  }
+  nav ul { display: none; flex-direction: column; width: 100%; }
+  nav .hamburger { display: flex; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 0.95rem; }
+  .services { gap: 20px; padding: 50px 5%; }
+  .service-card { max-width: 100%; }
 }
+
+@media screen and (max-width: 480px) {
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 0.9rem; }
+  .services { gap: 15px; padding: 40px 5%; }
+  }
