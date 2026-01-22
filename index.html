@@ -1,186 +1,93 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ImmoSérénité – Gestion immobilière en toute sérénité</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1a1a1a;
-    background: #fff;
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
 
-/* NAVIGATION PREMIUM */
-.nav-container {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(12px);
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    padding: 14px 22px;
-    z-index: 1000;
-}
+<body>
 
-.logo {
-    height: 42px;
-    flex-shrink: 0;
-}
+<header class="nav">
+    <div class="nav-container">
+        <img src="logo1.png" alt="ImmoSérénité" class="logo">
 
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: none;
-}
+        <nav>
+            <a href="index.html" class="active">Accueil</a>
+            <a href="gestion-location.html">Gestion locative</a>
+            <a href="logements-vacants.html">Logements vacants</a>
+            <a href="coordination.html">Coordination</a>
+            <a href="contact.html" class="nav-btn">Contact</a>
+        </nav>
+    </div>
+</header>
 
-.nav::-webkit-scrollbar {
-    display: none;
-}
+<section class="hero">
+    <div class="hero-overlay">
+        <img src="logo1.png" class="hero-logo" alt="ImmoSérénité">
 
-.nav a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-size: 0.88rem;
-    font-weight: 500;
-    position: relative;
-    flex-shrink: 0;
-}
+        <h1>La gestion immobilière<br>en toute sérénité</h1>
 
-/* Soulignement premium */
-.nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 1px;
-    background: #1a1a1a;
-    transition: width 0.25s ease;
-}
+        <p>
+            Un relais de confiance pour propriétaires, agences immobilières  
+            et études notariales.
+        </p>
 
-.nav a:hover::after,
-.nav a.active::after {
-    width: 100%;
-}
+        <a href="#services" class="cta">Découvrir nos services</a>
+    </div>
+</section>
 
-/* CTA Contact */
-.nav-cta {
-    padding: 6px 16px;
-    border: 1px solid #1a1a1a;
-    border-radius: 999px;
-    font-size: 0.8rem;
-}
+<section class="trust">
+    <div class="trust-container">
+        <div class="trust-item">
+            <h3>Présence terrain</h3>
+            <p>Un interlocuteur unique, réactif et local.</p>
+        </div>
+        <div class="trust-item">
+            <h3>Rigueur notariale</h3>
+            <p>Process structurés, traçabilité, comptes rendus clairs.</p>
+        </div>
+        <div class="trust-item">
+            <h3>Image professionnelle</h3>
+            <p>Une gestion qui valorise votre patrimoine.</p>
+        </div>
+    </div>
+</section>
 
-/* HERO */
-.hero {
-    height: 100vh;
-    background: url('index.png') center/cover no-repeat;
-    margin-top: 72px;
-    position: relative;
-}
+<section id="services" class="services">
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
+    <a href="gestion-location.html" class="service-card" style="background-image:url('location.png')">
+        <div class="service-overlay">
+            <h2>Gestion de location</h2>
+            <p>Gestion quotidienne, suivi rigoureux et transparence.</p>
+            <span>Découvrir</span>
+        </div>
+    </a>
 
-.hero-logo {
-    background: white;
-    padding: 20px 28px;
-    border-radius: 6px;
-    margin-bottom: 28px;
-}
+    <a href="logements-vacants.html" class="service-card" style="background-image:url('vacant.png')">
+        <div class="service-overlay">
+            <h2>Logements vacants</h2>
+            <p>Surveillance, entretien et sécurisation des biens.</p>
+            <span>Découvrir</span>
+        </div>
+    </a>
 
-.hero h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-    line-height: 1.25;
-}
+    <a href="coordination.html" class="service-card" style="background-image:url('gestion.png')">
+        <div class="service-overlay">
+            <h2>Gestion de biens</h2>
+            <p>Coordination complète et valorisation patrimoniale.</p>
+            <span>Découvrir</span>
+        </div>
+    </a>
 
-.hero p {
-    font-size: 1rem;
-    opacity: 0.9;
-}
+</section>
 
-/* SERVICES */
-.services {
-    display: grid;
-    gap: 26px;
-    padding: 60px 22px;
-}
+<footer class="footer">
+    <p>© 2026 ImmoSérénité — Tous droits réservés</p>
+</footer>
 
-.service-card {
-    height: 260px;
-    border-radius: 22px;
-    background-size: cover;
-    background-position: center;
-    text-decoration: none;
-    overflow: hidden;
-}
-
-.service-overlay {
-    height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
-    color: white;
-    padding: 26px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.service-overlay h2 {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-}
-
-.service-overlay p {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    margin-bottom: 16px;
-}
-
-.btn {
-    background: white;
-    color: #1a1a1a;
-    padding: 10px 22px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    width: fit-content;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 28px;
-    font-size: 0.8rem;
-    color: #666;
-}
-
-/* DESKTOP */
-@media (min-width: 900px) {
-    .services {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-}
+</body>
+</html>
