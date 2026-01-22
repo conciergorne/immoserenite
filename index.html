@@ -3,80 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ImmoSérénité | Accueil</title>
+  <title>ImmoSérénité</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="icon" type="image/png" href="logo1.png">
 </head>
 <body>
+
   <!-- HEADER -->
-  <header class="header">
-    <div class="header-container">
-      <a href="index.html" class="logo"><img src="logo1.png" alt="ImmoSérénité"></a>
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="gestion-locative.html">Gestion locative</a></li>
-          <li><a href="logements-vacants.html">Logements vacants</a></li>
-          <li><a href="coordination.html">Coordination</a></li>
-          <li><a href="#contact" class="contact-btn">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header>
+    <nav class="nav-container">
+      <a href="index.html"><img src="logo1.png" alt="Logo ImmoSérénité" class="logo"></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="gestion-locative.html">Gestion locative</a></li>
+        <li><a href="logements-vacants.html">Logements vacants</a></li>
+        <li><a href="coordination.html">Coordination</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <img src="index.png" alt="Header Image" class="hero-image">
+      <div class="hero-text">
+        <h1>La gestion immobilière en toute sérénité</h1>
+        <p>Un relais de confiance pour propriétaires, agences immobilières et études notariales.</p>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>La gestion immobilière en toute sérénité</h1>
-      <p>Un relais de confiance pour propriétaires, agences immobilières et études notariales.</p>
-    </div>
-  </section>
-
   <!-- SERVICES -->
   <section class="services">
-    <div class="service-card" style="background-image:url('location.png')">
-      <div class="service-overlay">
+    <a href="gestion-locative.html" class="service-card">
+      <img src="location.png" alt="Gestion locative">
+      <div class="service-text">
         <h2>Gestion de location</h2>
         <p>Optimisez vos locations avec un suivi professionnel.</p>
-        <a href="gestion-locative.html" class="btn">Découvrir</a>
       </div>
-    </div>
+    </a>
 
-    <div class="service-card" style="background-image:url('vacant.png')">
-      <div class="service-overlay">
+    <a href="logements-vacants.html" class="service-card">
+      <img src="vacant.png" alt="Logements vacants">
+      <div class="service-text">
         <h2>Logements vacants</h2>
-        <p>Surveillez, entretenez et valorisez vos biens inoccupés.</p>
-        <a href="logements-vacants.html" class="btn">Découvrir</a>
+        <p>Surveillez, entretenez et valorisez vos biens inoccupés avec sérénité.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="service-card" style="background-image:url('gestion.png')">
-      <div class="service-overlay">
+    <a href="gestion-biens.html" class="service-card">
+      <img src="gestion.png" alt="Gestion de biens">
+      <div class="service-text">
         <h2>Gestion de biens</h2>
         <p>Suivi complet de votre patrimoine immobilier avec accompagnement dédié.</p>
-        <a href="coordination.html" class="btn">Découvrir</a>
       </div>
-    </div>
+    </a>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2026 ImmoSérénité – Tous droits réservés</p>
   </footer>
 
-  <script>
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav ul');
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      hamburger.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
