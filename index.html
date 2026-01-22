@@ -2,46 +2,116 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>ImmoSérénité | Gestion & valorisation immobilière</title>
+    <meta name="description" content="ImmoSérénité accompagne propriétaires, agences et notaires dans la gestion, la surveillance et la valorisation de biens immobiliers.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ImmoSérénité – Gestion de biens vacants et services immobiliers pour professionnels.">
-    <title>ImmoSérénité | Accueil</title>
+
     <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="logo1.png" alt="Logo ImmoSérénité" class="logo">
-            <h1>Votre partenaire de confiance pour la gestion et la valorisation de vos biens immobiliers</h1>
-            <a href="#services" class="btn-primary">Découvrir nos services</a>
+
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <img src="logo1.png" alt="ImmoSérénité">
+        <h1>La gestion immobilière en toute sérénité</h1>
+        <p>
+            Un partenaire de confiance pour la gestion, la surveillance  
+            et la valorisation de vos biens immobiliers.
+        </p>
+    </div>
+</header>
+
+<main>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <h2>Une approche rigoureuse et humaine</h2>
+        <p>
+            ImmoSérénité intervient comme un relais de confiance pour les propriétaires,
+            agences immobilières et études notariales.
+            Notre mission : assurer une présence terrain fiable, une gestion structurée
+            et une valorisation durable de votre patrimoine immobilier.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+
+        <div class="service-card" style="background-image:url('location.png')">
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>Gestion de location</h3>
+                <p>
+                    Gestion quotidienne, coordination et suivi de vos biens loués,
+                    avec une exigence de qualité et de transparence.
+                </p>
+                <a href="gestion-location.html">Découvrir</a>
+            </div>
         </div>
-    </header>
 
-    <main>
-        <section id="services" class="services-section">
-            <a href="gestion-location.html" class="service-card" style="background-image: url('location.png');">
-                <div class="overlay">
-                    <h2>Gestion de location</h2>
-                    <p>Optimisez vos locations saisonnières et long terme avec un suivi professionnel.</p>
-                </div>
-            </a>
-            <a href="logements-vacants.html" class="service-card" style="background-image: url('vacant.png');">
-                <div class="overlay">
-                    <h2>Logements vacants</h2>
-                    <p>Surveillez, entretenez et valorisez vos biens inoccupés avec sérénité.</p>
-                </div>
-            </a>
-            <a href="gestion-biens.html" class="service-card" style="background-image: url('gestion.png');">
-                <div class="overlay">
-                    <h2>Gestion de biens</h2>
-                    <p>Suivi complet de votre patrimoine immobilier avec accompagnement dédié.</p>
-                </div>
-            </a>
-        </section>
-    </main>
+        <div class="service-card" style="background-image:url('vacant.png')">
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>Logements vacants</h3>
+                <p>
+                    Surveillance, entretien et sécurisation de biens inoccupés,
+                    pour préserver leur valeur et anticiper toute dégradation.
+                </p>
+                <a href="logements-vacants.html">Découvrir</a>
+            </div>
+        </div>
 
-    <footer>
-        <p>© 2026 ImmoSérénité – Tous droits réservés</p>
-        <p><a href="#">Mentions légales</a> | <a href="#">RGPD</a></p>
-    </footer>
+        <div class="service-card" style="background-image:url('gestion.png')">
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>Gestion de biens immobiliers</h3>
+                <p>
+                    Assistance immobilière, coordination de travaux
+                    et accompagnement sur mesure pour patrimoines complexes.
+                </p>
+                <a href="gestion-bien.html">Découvrir</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ENGAGEMENT -->
+    <section class="engagements">
+        <h2>Nos engagements</h2>
+
+        <div class="engagement-grid">
+            <div>
+                <h4>Rigueur</h4>
+                <p>Des procédures claires, un suivi documenté et une transparence totale.</p>
+            </div>
+            <div>
+                <h4>Présence terrain</h4>
+                <p>Un interlocuteur local, disponible et réactif.</p>
+            </div>
+            <div>
+                <h4>Confiance</h4>
+                <p>Une relation durable fondée sur la fiabilité et la discrétion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Parlons de votre projet</h2>
+        <p>
+            Chaque bien mérite une attention particulière.
+            Contactez-nous pour un échange confidentiel et personnalisé.
+        </p>
+        <a href="contact.html">Nous contacter</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ImmoSérénité — Tous droits réservés</p>
+</footer>
+
 </body>
 </html>
