@@ -5,79 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion locative - ImmoSérénité</title>
     <link rel="stylesheet" href="gestion-locative.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-logo"><img src="logo.png" alt="ImmoSérénité"></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="gestion-locative.html" class="active">Gestion locative</a></li>
-            <li><a href="logements-vacants.html">Logements vacants</a></li>
-            <li><a href="coordination.html">Coordination</a></li>
-            <li><a href="contact.html" class="cta">Contact</a></li>
-        </ul>
-        <div class="hamburger"><span></span><span></span><span></span></div>
-    </nav>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <img src="logo.png" alt="ImmoSérénité" class="hero-logo">
-            <h1>Gestion locative en toute sérénité</h1>
-            <p>Suivi complet de vos locations saisonnières ou longues durées avec exigence de qualité, sécurité et transparence pour propriétaires et agences.</p>
-            <a href="#services" class="btn-primary">Découvrir nos services</a>
+<nav class="nav">
+    <div class="nav-logo"><img src="logo1.png" alt="ImmoSérénité"></div>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="gestion-locative.html" class="active">Gestion locative</a></li>
+        <li><a href="logements-vacants.html">Logements vacants</a></li>
+        <li><a href="coordination.html">Coordination</a></li>
+        <li><a href="contact.html" class="cta">Contact</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <img src="logo1.png" alt="ImmoSérénité" class="hero-logo">
+        <h1>Gestion locative en toute sérénité</h1>
+        <p>Suivi complet de vos locations saisonnières ou longues durées avec exigence de qualité, sécurité et transparence pour propriétaires et agences.</p>
+        <a href="#services" class="btn-primary">Découvrir nos services</a>
+    </div>
+</header>
+
+<section id="services" class="services">
+    <!-- Packs existants -->
+    <div class="service">
+        <div class="service-overlay" style="background-image:url('location.png');"></div>
+        <div class="service-content">
+            <h2>Pack Essentiel</h2>
+            <p>Gestion administrative et technique complète, suivi locataire, états des lieux et reporting mensuel.</p>
+            <p class="price">À partir de 180€/mois</p>
         </div>
-    </header>
+    </div>
 
-    <section id="services" class="services">
-        <div class="service">
-            <div class="service-overlay" style="background-image:url('location.png');"></div>
-            <div class="service-content">
-                <h2>Pack Essentiel</h2>
-                <p>Gestion administrative et technique complète, suivi locataire, états des lieux et reporting mensuel.</p>
-                <p class="price">À partir de 180€/mois</p>
-            </div>
+    <div class="service">
+        <div class="service-overlay" style="background-image:url('location.png');"></div>
+        <div class="service-content">
+            <h2>Pack Premium</h2>
+            <p>Tout l’Essentiel + optimisation fiscale, conseil personnalisé, interventions ponctuelles et suivi prioritaire.</p>
+            <p class="price">À partir de 250€/mois</p>
         </div>
+    </div>
 
-        <div class="service">
-            <div class="service-overlay" style="background-image:url('location.png');"></div>
-            <div class="service-content">
-                <h2>Pack Premium</h2>
-                <p>Tout l’Essentiel + optimisation fiscale, conseil personnalisé, interventions ponctuelles et suivi prioritaire.</p>
-                <p class="price">À partir de 250€/mois</p>
-            </div>
+    <div class="service">
+        <div class="service-overlay" style="background-image:url('location.png');"></div>
+        <div class="service-content">
+            <h2>Coordination ponctuelle</h2>
+            <p>Gestion ponctuelle de vos projets, interventions spécifiques et suivi personnalisé.</p>
+            <p class="price">10% du montant de la prestation</p>
         </div>
+    </div>
+</section>
 
-        <div class="service">
-            <div class="service-overlay" style="background-image:url('location.png');"></div>
-            <div class="service-content">
-                <h2>Coordination ponctuelle</h2>
-                <p>Gestion ponctuelle de vos projets, interventions spécifiques et suivi personnalisé.</p>
-                <p class="price">10% du montant de la prestation</p>
-            </div>
+<!-- Nouvelle section : Services à la carte -->
+<section class="optional-services">
+    <h2>Services à la carte</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Visite de contrôle</h3>
+            <p>Vérification rapide de l’état du logement</p>
+            <span>25€ / visite</span>
         </div>
-    </section>
+        <div class="service-card">
+            <h3>Changement serrure / clé</h3>
+            <p>Sécurisation ou remise en état</p>
+            <span>À partir de 40€</span>
+        </div>
+        <div class="service-card">
+            <h3>Petits travaux / bricolage</h3>
+            <p>Ampoule, peinture, réparation mineure</p>
+            <span>30€/h</span>
+        </div>
+        <div class="service-card">
+            <h3>Relance locataire / mise en demeure</h3>
+            <p>Gestion administrative ponctuelle</p>
+            <span>15€ / relance</span>
+        </div>
+        <div class="service-card">
+            <h3>État des lieux supplémentaire</h3>
+            <p>En dehors des états des lieux inclus</p>
+            <span>50€ / état des lieux</span>
+        </div>
+    </div>
+</section>
 
-    <section class="approach">
-        <h2>Une approche rigoureuse et humaine</h2>
-        <p>Nous intervenons comme un relais de confiance pour les propriétaires, agences immobilières et études notariales. Notre mission : assurer une présence terrain fiable, une gestion structurée et une valorisation maximale de vos biens.</p>
-    </section>
+<section class="approach">
+    <h2>Une approche rigoureuse et humaine</h2>
+    <p>Nous intervenons comme un relais de confiance pour les propriétaires, agences immobilières et études notariales. Notre mission : assurer une présence terrain fiable, une gestion structurée et une valorisation maximale de vos biens.</p>
+</section>
 
-    <footer>
-        <p>© 2026 ImmoSérénité – Tous droits réservés</p>
-    </footer>
+<footer>
+    <p>© 2026 ImmoSérénité – Tous droits réservés</p>
+</footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+    hamburger.classList.toggle('toggle');
+});
+</script>
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            hamburger.classList.toggle('toggle');
-        });
-    </script>
 </body>
 </html>
