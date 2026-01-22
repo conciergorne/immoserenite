@@ -1,72 +1,186 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImmoSérénité</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<!-- NAVIGATION -->
-<header class="nav-container">
-    <img src="logo1.png" alt="ImmoSérénité" class="logo">
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+}
 
-    <nav class="nav">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="gestion-location.html">Gestion locative</a>
-        <a href="logements-vacants.html">Logements vacants</a>
-        <a href="coordination.html">Coordination</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
-</header>
+/* NAVIGATION PREMIUM */
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 14px 22px;
+    z-index: 1000;
+}
 
-<!-- HEADER -->
-<section class="hero">
-    <div class="hero-overlay">
-        <img src="logo1.png" alt="ImmoSérénité" class="hero-logo">
+.logo {
+    height: 42px;
+    flex-shrink: 0;
+}
 
-        <h1>La gestion immobilière<br>en toute sérénité</h1>
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
 
-        <p>
-            Un relais de confiance pour propriétaires,<br>
-            agences immobilières et études notariales.
-        </p>
-    </div>
-</section>
+.nav::-webkit-scrollbar {
+    display: none;
+}
 
-<!-- SERVICES -->
-<section class="services">
+.nav a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.88rem;
+    font-weight: 500;
+    position: relative;
+    flex-shrink: 0;
+}
 
-    <a href="gestion-location.html" class="service-card" style="background-image:url('location.png')">
-        <div class="service-overlay">
-            <h2>Gestion de location</h2>
-            <p>Gestion quotidienne, coordination et suivi de vos biens loués.</p>
-            <span class="btn">Découvrir</span>
-        </div>
-    </a>
+/* Soulignement premium */
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: #1a1a1a;
+    transition: width 0.25s ease;
+}
 
-    <a href="logements-vacants.html" class="service-card" style="background-image:url('vacant.png')">
-        <div class="service-overlay">
-            <h2>Logements vacants</h2>
-            <p>Surveillance, entretien et sécurisation de biens inoccupés.</p>
-            <span class="btn">Découvrir</span>
-        </div>
-    </a>
+.nav a:hover::after,
+.nav a.active::after {
+    width: 100%;
+}
 
-    <a href="coordination.html" class="service-card" style="background-image:url('gestion.png')">
-        <div class="service-overlay">
-            <h2>Gestion de biens</h2>
-            <p>Coordination, suivi et valorisation de votre patrimoine.</p>
-            <span class="btn">Découvrir</span>
-        </div>
-    </a>
+/* CTA Contact */
+.nav-cta {
+    padding: 6px 16px;
+    border: 1px solid #1a1a1a;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
 
-</section>
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('index.png') center/cover no-repeat;
+    margin-top: 72px;
+    position: relative;
+}
 
-<footer>
-    © 2026 ImmoSérénité — Tous droits réservés
-</footer>
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
 
-</body>
-</html>
+.hero-logo {
+    background: white;
+    padding: 20px 28px;
+    border-radius: 6px;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.25;
+}
+
+.hero p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* SERVICES */
+.services {
+    display: grid;
+    gap: 26px;
+    padding: 60px 22px;
+}
+
+.service-card {
+    height: 260px;
+    border-radius: 22px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.service-overlay {
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
+    color: white;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.service-overlay h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.service-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 16px;
+}
+
+.btn {
+    background: white;
+    color: #1a1a1a;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 28px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    .services {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
