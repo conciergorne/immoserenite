@@ -189,4 +189,19 @@ body {
   .hero-content {
     padding: 25px;
   }
-}
+/* FIX mobile – cartes services trop hautes */
+@media (max-width: 768px) {
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .service-card p {
+    margin-bottom: 0;
+    opacity: 0.85;
+  }
