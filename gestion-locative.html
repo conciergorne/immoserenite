@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion locative | ImmoSérénité</title>
+    <title>Gestion locative - ImmoSérénité</title>
     <link rel="stylesheet" href="gestion-locative.css">
 </head>
 <body>
-    <!-- Header + Navigation -->
-    <header class="header">
-        <div class="logo">
-            <img src="logo1.png" alt="Logo ImmoSérénité">
-        </div>
-        <nav class="nav">
-            <ul>
+    <header>
+        <nav class="navbar">
+            <img src="logo1.png" alt="Logo ImmoSérénité" class="logo">
+            <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="gestion-locative.html" class="active">Gestion locative</a></li>
                 <li><a href="logements-vacants.html">Logements vacants</a></li>
@@ -21,77 +18,55 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="hero">
+            <h1>Gestion locative professionnelle</h1>
+            <p>Un relais de confiance pour propriétaires, agences et études notariales</p>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="gestion.png" alt="Gestion locative" class="hero-bg">
-        <div class="hero-text">
-            <h1>Gestion locative déléguée</h1>
-            <p>Une prise en charge complète, rigoureuse et transparente de vos biens immobiliers, pensée pour les propriétaires exigeants, investisseurs et professionnels du droit.</p>
-            <a href="#packs" class="hero-btn">Découvrir nos packs</a>
-        </div>
-    </section>
+    <main>
+        <section class="packs">
+            <h2>Nos Packs</h2>
+            <div class="pack-container">
+                <div class="pack">
+                    <h3>Pack Essentiel – 1 maison</h3>
+                    <p class="price">80€/mois</p>
+                    <ul>
+                        <li>Gestion quotidienne de la location</li>
+                        <li>Coordination ponctuelle prestataires</li>
+                        <li>État des lieux standard</li>
+                        <li>Rapport mensuel simple</li>
+                    </ul>
+                    <a href="#contact" class="btn">Découvrir</a>
+                </div>
+                <div class="pack">
+                    <h3>Pack Multi-Maisons – 5 maisons</h3>
+                    <p class="price">350€/mois</p>
+                    <ul>
+                        <li>Services du Pack Essentiel pour 5 maisons</li>
+                        <li>Coordination régulière des prestataires</li>
+                        <li>Rapports détaillés centralisés</li>
+                        <li>Assistance prioritaire</li>
+                    </ul>
+                    <a href="#contact" class="btn">Découvrir</a>
+                </div>
+                <div class="pack">
+                    <h3>Pack Cabinet / Notaire</h3>
+                    <p class="price">Sur devis</p>
+                    <ul>
+                        <li>Gestion complète pour tous les biens du cabinet</li>
+                        <li>Rapports professionnels détaillés</li>
+                        <li>Coordination prestataires haut de gamme</li>
+                        <li>Assistance juridique & administrative</li>
+                    </ul>
+                    <a href="#contact" class="btn">Découvrir</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Packs Section -->
-    <section id="packs" class="packs">
-        <h2>Nos packs de gestion locative</h2>
-        <div class="pack-grid">
-            <div class="pack">
-                <h3>Pack Essentiel</h3>
-                <p>Gestion d'une maison individuelle (prix mensuel)</p>
-                <p class="price">300€ / maison</p>
-                <ul>
-                    <li>Suivi des locations</li>
-                    <li>Relances locataires</li>
-                    <li>Gestion des dépôts de garantie</li>
-                </ul>
-            </div>
-            <div class="pack">
-                <h3>Pack Premium</h3>
-                <p>Gestion de 1 à 5 maisons (prix mensuel)</p>
-                <p class="price">1 200€ / lot</p>
-                <ul>
-                    <li>Tout du Pack Essentiel</li>
-                    <li>Reporting mensuel</li>
-                    <li>Coordination prestataires</li>
-                </ul>
-            </div>
-            <div class="pack">
-                <h3>Pack Notaire / Agence</h3>
-                <p>Gestion complète de l’ensemble du portefeuille du cabinet</p>
-                <p class="price">Sur devis</p>
-                <ul>
-                    <li>Suivi multi-biens</li>
-                    <li>Rapports et audits réguliers</li>
-                    <li>Coordination juridique et notariale</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services hors pack -->
-    <section class="services">
-        <h2>Services complémentaires</h2>
-        <div class="service-grid">
-            <div class="service">
-                <h3>Coordination ponctuelle</h3>
-                <p>10% du montant des prestations ponctuelles (ex : entretien, réparation, diagnostics)</p>
-            </div>
-            <div class="service">
-                <h3>Visites et états des lieux</h3>
-                <p>Forfait 50€ / visite maison individuelle</p>
-            </div>
-            <div class="service">
-                <h3>Assistance juridique</h3>
-                <p>Sur devis selon le type de dossier</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 ImmoSérénité - Tous droits réservés</p>
+        <p>&copy; 2026 ImmoSérénité. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
