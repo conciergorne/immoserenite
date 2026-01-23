@@ -3,95 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ImmoSérénité</title>
+  <title>ImmoSérénité – Gestion immobilière haut de gamme</title>
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="logo">
-      <a href="index.html"><img src="logo1.png" alt="ImmoSérénité Logo"></a>
-    </div>
-    <ul>
-      <li><a href="index.html" class="active">Accueil</a></li>
-      <li><a href="gestion-locative.html">Gestion locative</a></li>
-      <li><a href="logements-vacants.html">Logements vacants</a></li>
-      <li><a href="coordination.html">Coordination</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </nav>
+<!-- NAVIGATION -->
+<header class="header">
+  <div class="nav-container">
+    <img src="logo1.png" alt="ImmoSérénité" class="logo">
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>La gestion immobilière en toute sérénité</h1>
-    <p>Un relais de confiance pour propriétaires, agences immobilières et études notariales.</p>
-    <a href="gestion-locative.html" class="btn">Découvrir</a>
-  </section>
+    <nav class="nav">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="gestion-locative.html">Gestion locative</a>
+      <a href="#">Logements vacants</a>
+      <a href="#">Coordination</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- SERVICES -->
-  <section class="services">
-    <div class="service-card">
-      <img src="location.png" alt="Gestion de location">
-      <div class="content">
-        <h3>Gestion de location</h3>
-        <p>Optimisez vos locations saisonnières et long terme avec un suivi professionnel et transparent.</p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>La gestion immobilière<br>en toute sérénité</h1>
+    <p>
+      Un relais de confiance pour propriétaires, agences immobilières  
+      et études notariales.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2>Nos expertises</h2>
+
+  <div class="services-grid">
+
+    <a href="gestion-locative.html" class="service-card">
+      <img src="location.png" alt="Gestion locative">
+      <div class="service-text">
+        <h3>Gestion locative</h3>
+        <p>Suivi rigoureux, coordination et sérénité pour vos biens.</p>
+        <span>Découvrir →</span>
       </div>
-    </div>
+    </a>
 
-    <div class="service-card">
+    <a href="#" class="service-card">
       <img src="vacant.png" alt="Logements vacants">
-      <div class="content">
+      <div class="service-text">
         <h3>Logements vacants</h3>
-        <p>Surveillez, entretenez et valorisez vos biens inoccupés pour préserver leur valeur et anticiper toute dégradation.</p>
+        <p>Surveillance, entretien et valorisation de biens inoccupés.</p>
+        <span>Découvrir →</span>
       </div>
-    </div>
+    </a>
 
-    <div class="service-card">
+    <a href="#" class="service-card">
       <img src="gestion.png" alt="Coordination">
-      <div class="content">
+      <div class="service-text">
         <h3>Coordination</h3>
-        <p>Coordination ponctuelle ou régulière pour tous vos besoins de maintenance et interventions sur site.</p>
+        <p>Gestion ponctuelle et coordination d’intervenants qualifiés.</p>
+        <span>Découvrir →</span>
       </div>
-    </div>
-  </section>
+    </a>
 
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2026 ImmoSérénité. Tous droits réservés.
-  </footer>
+  </div>
+</section>
 
-  <!-- SCRIPT MENU & ANIMATIONS -->
-  <script>
-    // Toggle menu hamburger
-    function toggleMenu() {
-      const navList = document.querySelector('nav ul');
-      if(navList.style.display === 'flex'){
-        navList.style.display = 'none';
-      } else {
-        navList.style.display = 'flex';
-        navList.style.flexDirection = 'column';
-      }
-    }
-
-    // Animation fade-in pour services
-    const cards = document.querySelectorAll('.service-card');
-    window.addEventListener('scroll', () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if(cardTop < triggerBottom){
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }
-      });
-    });
-  </script>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 ImmoSérénité – Tous droits réservés</p>
+</footer>
 
 </body>
 </html>
