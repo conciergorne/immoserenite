@@ -67,6 +67,10 @@ nav {
   position: relative;
   height: 60vh;
   margin-top: 70px;
+  background-image: url('hero-gestion-locative.png'); /* PNG utilisé */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero img {
