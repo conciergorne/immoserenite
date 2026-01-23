@@ -1,6 +1,4 @@
-/* ===============================
-   RESET
-================================ */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +13,7 @@ body {
 }
 
 /* ===============================
-   HEADER FIXE – ULTRA PREMIUM
+   HEADER FIXE – PREMIUM
 ================================ */
 header {
     position: fixed;
@@ -23,7 +21,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(15, 15, 15, 0.95);
+
+    background: rgba(15, 15, 15, 0.97);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(212,160,23,0.25);
 }
@@ -32,6 +31,7 @@ header {
     max-width: 1200px;
     margin: auto;
     padding: 14px 20px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,26 +39,24 @@ header {
 
 /* LOGO */
 .logo img {
-    height: 38px;
-    width: auto;
+    height: 36px;
 }
 
-/* ===============================
-   MENU DESKTOP
-================================ */
+/* NAV */
 nav ul {
-    display: flex;
     list-style: none;
+    display: flex;
     gap: 28px;
 }
 
 nav a {
     text-decoration: none;
-    font-weight: 500;
     color: #eaeaea;
+    font-weight: 500;
     position: relative;
 }
 
+/* Soulignement luxe */
 nav a::after {
     content: "";
     position: absolute;
@@ -75,169 +73,88 @@ nav a.active::after {
     width: 100%;
 }
 
-/* ===============================
-   HAMBURGER
-================================ */
+/* MENU MOBILE BUTTON */
 .menu-toggle {
     display: none;
     font-size: 28px;
-    cursor: pointer;
     color: #d4a017;
+    cursor: pointer;
 }
 
 /* ===============================
-   HERO OFFSET (IMPORTANT)
+   OFFSET HEADER
 ================================ */
 main {
     padding-top: 90px;
 }
 
 /* ===============================
-   HERO IMAGE
+   HERO
 ================================ */
+.hero {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .hero img {
-    border-radius: 18px;
-}
-
-/* ===============================
-   TITRES
-================================ */
-h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
-    color: #ffffff;
-}
-
-/* ===============================
-   PACKS – ULTRA PREMIUM
-================================ */
-.packs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
-}
-
-.pack {
-    background: linear-gradient(145deg, #161616, #0b0b0b);
-    border-radius: 22px;
-    padding: 26px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    border: 1px solid rgba(212,160,23,0.25);
-}
-
-.pack:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(212,160,23,0.25);
-}
-
-.pack h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.pack .price {
-    font-size: 24px;
-    font-weight: 700;
-    color: #d4a017;
-    margin-bottom: 18px;
-}
-
-.pack ul {
-    padding-left: 18px;
-    margin-bottom: 22px;
-}
-
-.pack li {
-    margin-bottom: 8px;
-}
-
-.pack button {
+    max-width: 1200px;
     width: 100%;
-    padding: 14px;
-    border-radius: 14px;
-    border: none;
-    background: linear-gradient(135deg, #d4a017, #ffdf7e);
-    color: #111;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.pack button:hover {
-    opacity: 0.9;
+    border-radius: 18px;
 }
 
 /* ===============================
-   SERVICES HORS PACK
+   CONTENT
 ================================ */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+.content {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.service {
-    background: #141414;
-    border-radius: 18px;
-    padding: 22px;
-    border: 1px solid rgba(212,160,23,0.2);
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.service h4 {
+.content p {
     font-size: 18px;
-    margin-bottom: 6px;
-}
-
-.service .price {
-    color: #ffdf7e;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.service button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 12px;
-    background: transparent;
-    border: 1px solid #d4a017;
-    color: #d4a017;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.service button:hover {
-    background: #d4a017;
-    color: #111;
+    color: #cfcfcf;
 }
 
 /* ===============================
    FOOTER
 ================================ */
 footer {
-    background: #0b0b0b;
     text-align: center;
-    padding: 26px;
-    margin-top: 80px;
+    padding: 30px;
+    background: #0b0b0b;
     color: #aaa;
+    margin-top: 80px;
 }
 
 /* ===============================
-   MOBILE MENU + ANIMATION
+   MOBILE
 ================================ */
 @media (max-width: 768px) {
 
     nav ul {
         position: absolute;
-        top: 72px;
+        top: 100%;
         left: 0;
         width: 100%;
-        flex-direction: column;
+
         background: #0f0f0f;
+        flex-direction: column;
+        align-items: center;
         gap: 18px;
+
         padding: 24px 0;
         display: none;
-        animation: slideDown 0.35s ease forwards;
+
         border-bottom: 1px solid rgba(212,160,23,0.3);
+        animation: slideDown 0.3s ease;
     }
 
     nav ul.active {
@@ -248,13 +165,13 @@ footer {
         display: block;
     }
 
-    h2 {
+    .content h2 {
         font-size: 24px;
     }
 }
 
 /* ===============================
-   ANIMATION MENU
+   ANIMATION
 ================================ */
 @keyframes slideDown {
     from {
