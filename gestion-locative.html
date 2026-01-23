@@ -1,145 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Gestion locative – ImmoSérénité</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ImmoSérénité accompagne propriétaires et professionnels avec des prestations de suivi immobilier, coordination et assistance administrative.">
-    <link rel="stylesheet" href="gestion-locative.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion Locative - ImmoSérénité</title>
+  <link rel="stylesheet" href="gestion-locative.css">
 </head>
-
 <body>
-
-<!-- HEADER -->
-<header class="header">
-    <div class="header-container">
-        <img src="logo1.png" alt="ImmoSérénité" class="logo">
-
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="gestion-locative.html" class="active">Gestion locative</a></li>
-                <li><a href="#">Logements vacants</a></li>
-                <li><a href="#">Coordination</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <img src="logo1.png" alt="ImmoSérénité" class="logo">
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="gestion-locative.html" class="active">Gestion locative</a>
+        <a href="logements-vacants.html">Logements vacants</a>
+        <a href="coordination.html">Coordination</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </div>
-</header>
+  </header>
 
-<!-- HERO -->
-<section class="hero" style="background-image: url('gestion.png');">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>Gestion locative & accompagnement immobilier</h1>
-        <p>
-            ImmoSérénité propose un accompagnement opérationnel et administratif
-            destiné aux propriétaires, investisseurs et professionnels de l’immobilier,
-            sans exercice d’activité réglementée.
-        </p>
+  <!-- HERO -->
+  <section class="hero" style="background-image: url('gestion.png');">
+    <div class="hero-overlay">
+      <h1>Gestion locative & accompagnement immobilier</h1>
+      <p>ImmoSérénité propose un accompagnement opérationnel et administratif destiné aux propriétaires, investisseurs et professionnels de l'immobilier, sans exercice d'activité réglementée.</p>
     </div>
-</section>
+  </section>
 
-<!-- INTRO -->
-<section class="intro">
+  <!-- INTRO -->
+  <section class="intro">
     <div class="container">
-        <p>
-            Nous intervenons comme un <strong>tiers de confiance</strong> pour assurer
-            le suivi terrain, la coordination des intervenants et la transmission
-            d’informations fiables, dans une logique de transparence et de sérénité.
-        </p>
+      <p>Nous intervenons comme un <strong>tiers de confiance</strong> pour assurer le suivi terrain, la coordination des intervenants et la transmission d’informations fiables, dans une logique de transparence et de sérénité.</p>
     </div>
-</section>
+  </section>
 
-<!-- PACKS -->
-<section class="packs">
-    <div class="container">
-        <h2>Nos packs d’accompagnement locatif</h2>
-
-        <div class="packs-grid">
-
-            <!-- PACK MAISON -->
-            <div class="pack">
-                <h3>Maison individuelle</h3>
-                <p class="price">80 €/mois</p>
-                <ul>
-                    <li>Suivi opérationnel du bien immobilier</li>
-                    <li>Compte rendu mensuel synthétique</li>
-                    <li>Coordination des prestataires et interventions</li>
-                    <li>Présence terrain si nécessaire</li>
-                    <li>Interface propriétaire / intervenants</li>
-                </ul>
-                <a href="#" class="btn">Découvrir</a>
-            </div>
-
-            <!-- PACK LOT -->
-            <div class="pack">
-                <h3>Lot de 5 maisons</h3>
-                <p class="price">350 €/mois</p>
-                <ul>
-                    <li>Suivi opérationnel de plusieurs biens</li>
-                    <li>Rapports centralisés et structurés</li>
-                    <li>Coordination globale des interventions</li>
-                    <li>Priorisation des demandes</li>
-                    <li>Interlocuteur unique</li>
-                </ul>
-                <a href="#" class="btn">Découvrir</a>
-            </div>
-
-            <!-- PACK NOTAIRE -->
-            <div class="pack premium">
-                <h3>Cabinet / Notaire</h3>
-                <p class="price">Sur devis</p>
-                <ul>
-                    <li>Suivi opérationnel de biens immobiliers</li>
-                    <li>Reporting structuré à destination des études notariales</li>
-                    <li>Présence terrain et coordination des acteurs</li>
-                    <li>Interface entre propriétaires et professionnels</li>
-                    <li>Transmission d’informations factuelles</li>
-                </ul>
-                <a href="#" class="btn">Nous consulter</a>
-            </div>
-
+  <!-- NOS PACKS -->
+  <section class="services">
+    <h2>Nos packs</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Maison individuelle</h3>
+          <p><span>300€/mois</span></p>
+          <ul>
+            <li>Suivi complet du bien</li>
+            <li>Rapport mensuel simplifié</li>
+            <li>Coordination prestataires</li>
+          </ul>
+          <button>Découvrir</button>
         </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Lot 5 maisons</h3>
+          <p><span>350€/mois</span></p>
+          <ul>
+            <li>Services du pack individuel pour 5 maisons</li>
+            <li>Rapports centralisés détaillés</li>
+            <li>Assistance prioritaire</li>
+          </ul>
+          <button>Découvrir</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Cabinet / Notaire</h3>
+          <p><span>Sur devis</span></p>
+          <ul>
+            <li>Gestion complète multi-biens</li>
+            <li>Rapports professionnels détaillés</li>
+            <li>Coordination prestataires haut de gamme</li>
+            <li>Assistance administrative</li>
+          </ul>
+          <button>Découvrir</button>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- SERVICES HORS PACK -->
-<section class="services">
-    <div class="container">
-        <h2>Services complémentaires</h2>
-
-        <ul class="services-list">
-            <li>Assistance à l’état des lieux (présence, relevés, photos – hors signature)</li>
-            <li>Relevé de l’état général d’un logement</li>
-            <li>Visites de contrôle ponctuelles</li>
-            <li>Coordination d’interventions urgentes</li>
-            <li>Assistance administrative à la mise en location (hors bail)</li>
-            <li>Orientation et coordination avec notaires, avocats ou huissiers</li>
-            <li>Comptes rendus détaillés à destination du propriétaire</li>
-        </ul>
+  <!-- SERVICES COMPLÉMENTAIRES -->
+  <section class="services-extra">
+    <h2>Services complémentaires / Hors pack</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Etat des lieux</h3>
+          <p><span>50€ / logement</span></p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Rédaction d'annonces & reporting</h3>
+          <p><span>30 à 50€ / action</span></p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Assistance coordination ponctuelle</h3>
+          <p><span>30€ / intervention</span></p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- MENTION LEGALE -->
-<section class="legal">
-    <div class="container">
-        <p>
-            <strong>Information légale :</strong><br>
-            ImmoSérénité n’exerce aucune activité réglementée relevant de la loi Hoguet
-            ou du conseil juridique. Les prestations proposées sont exclusivement des
-            services de suivi opérationnel, de coordination et d’assistance administrative.
-            Aucune rédaction, signature ou représentation juridique n’est réalisée.
-        </p>
-    </div>
-</section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 – ImmoSérénité</p>
+  </footer>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <p>© ImmoSérénité – Tous droits réservés</p>
-    </div>
-</footer>
-
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+    }
+  </script>
 </body>
-                    </html>
+</html>
