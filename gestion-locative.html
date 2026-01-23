@@ -1,114 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion locative - ImmoSérénité</title>
-    <link rel="stylesheet" href="gestion-locative.css">
+  <meta charset="UTF-8">
+  <title>Gestion locative – Conciergerie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="gestion-locative.css">
 </head>
+
 <body>
 
-<nav class="nav">
-    <div class="nav-logo"><img src="logo1.png" alt="ImmoSérénité"></div>
-    <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="gestion-locative.html" class="active">Gestion locative</a></li>
-        <li><a href="logements-vacants.html">Logements vacants</a></li>
-        <li><a href="coordination.html">Coordination</a></li>
-        <li><a href="contact.html" class="cta">Contact</a></li>
-    </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
-</nav>
-
-<header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <img src="logo1.png" alt="ImmoSérénité" class="hero-logo">
-        <h1>Gestion locative en toute sérénité</h1>
-        <p>Suivi complet de vos locations saisonnières ou longues durées avec exigence de qualité, sécurité et transparence pour propriétaires et agences.</p>
-        <a href="#services" class="btn-primary">Découvrir nos services</a>
-    </div>
+<header class="header">
+  <div class="nav-container">
+    <img src="logo1.png" alt="Logo" class="logo">
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="gestion-locative.html" class="active">Gestion locative</a>
+      <a href="#">Logements vacants</a>
+      <a href="#">Coordination</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section id="services" class="services">
-    <!-- Packs existants -->
-    <div class="service">
-        <div class="service-overlay" style="background-image:url('location.png');"></div>
-        <div class="service-content">
-            <h2>Pack Essentiel</h2>
-            <p>Gestion administrative et technique complète, suivi locataire, états des lieux et reporting mensuel.</p>
-            <p class="price">À partir de 180€/mois</p>
-        </div>
-    </div>
-
-    <div class="service">
-        <div class="service-overlay" style="background-image:url('location.png');"></div>
-        <div class="service-content">
-            <h2>Pack Premium</h2>
-            <p>Tout l’Essentiel + optimisation fiscale, conseil personnalisé, interventions ponctuelles et suivi prioritaire.</p>
-            <p class="price">À partir de 250€/mois</p>
-        </div>
-    </div>
-
-    <div class="service">
-        <div class="service-overlay" style="background-image:url('location.png');"></div>
-        <div class="service-content">
-            <h2>Coordination ponctuelle</h2>
-            <p>Gestion ponctuelle de vos projets, interventions spécifiques et suivi personnalisé.</p>
-            <p class="price">10% du montant de la prestation</p>
-        </div>
-    </div>
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Gestion locative déléguée</h1>
+    <p>
+      Une prise en charge complète, rigoureuse et transparente de vos biens immobiliers,
+      pensée pour les propriétaires exigeants, investisseurs et professionnels du droit.
+    </p>
+  </div>
 </section>
 
-<!-- Nouvelle section : Services à la carte -->
-<section class="optional-services">
-    <h2>Services à la carte</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>Visite de contrôle</h3>
-            <p>Vérification rapide de l’état du logement</p>
-            <span>25€ / visite</span>
-        </div>
-        <div class="service-card">
-            <h3>Changement serrure / clé</h3>
-            <p>Sécurisation ou remise en état</p>
-            <span>À partir de 40€</span>
-        </div>
-        <div class="service-card">
-            <h3>Petits travaux / bricolage</h3>
-            <p>Ampoule, peinture, réparation mineure</p>
-            <span>30€/h</span>
-        </div>
-        <div class="service-card">
-            <h3>Relance locataire / mise en demeure</h3>
-            <p>Gestion administrative ponctuelle</p>
-            <span>15€ / relance</span>
-        </div>
-        <div class="service-card">
-            <h3>État des lieux supplémentaire</h3>
-            <p>En dehors des états des lieux inclus</p>
-            <span>50€ / état des lieux</span>
-        </div>
+<section class="intro">
+  <h2>Une gestion pensée pour la sérénité</h2>
+  <p>
+    Nous intervenons comme un **tiers de confiance**, en lien avec les propriétaires,
+    agences et études notariales, pour assurer le suivi opérationnel, administratif
+    et technique des biens en location.
+  </p>
+</section>
+
+<section class="packs">
+  <h2>Packs de gestion locative</h2>
+
+  <div class="packs-grid">
+
+    <div class="pack">
+      <h3>Pack Essentiel</h3>
+      <p class="price">59 € / mois</p>
+      <p class="scope">Prix par bien immobilier (maison ou appartement)</p>
+      <ul>
+        <li>Visites de contrôle régulières</li>
+        <li>Interface locataire / propriétaire</li>
+        <li>Signalement des anomalies</li>
+        <li>Reporting mensuel</li>
+      </ul>
     </div>
+
+    <div class="pack premium">
+      <h3>Pack Confort</h3>
+      <p class="price">89 € / mois</p>
+      <p class="scope">Prix par bien – tarifs dégressifs dès 3 biens</p>
+      <ul>
+        <li>Tout le Pack Essentiel</li>
+        <li>Coordination des interventions</li>
+        <li>Suivi des prestataires</li>
+        <li>Compte-rendu détaillé</li>
+      </ul>
+    </div>
+
+    <div class="pack">
+      <h3>Pack Excellence</h3>
+      <p class="price">Sur devis</p>
+      <p class="scope">
+        Destiné aux investisseurs, agences et cabinets de notaires
+        (lots de biens ou portefeuilles immobiliers)
+      </p>
+      <ul>
+        <li>Gestion multi-biens</li>
+        <li>Interlocuteur dédié</li>
+        <li>Process et reporting personnalisés</li>
+        <li>Confidentialité renforcée</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
 
-<section class="approach">
-    <h2>Une approche rigoureuse et humaine</h2>
-    <p>Nous intervenons comme un relais de confiance pour les propriétaires, agences immobilières et études notariales. Notre mission : assurer une présence terrain fiable, une gestion structurée et une valorisation maximale de vos biens.</p>
+<section class="hors-pack">
+  <h2>Services disponibles hors pack</h2>
+  <p class="subtitle">
+    Interventions ponctuelles, sans engagement mensuel
+  </p>
+
+  <ul class="services-list">
+    <li>Visite de bien avec rapport détaillé</li>
+    <li>Remise de clés / état visuel</li>
+    <li>Coordination de travaux ponctuels</li>
+    <li>Présence lors d’expertise ou de sinistre</li>
+    <li>Intervention urgente (sur devis)</li>
+  </ul>
+
+  <p class="note">
+    Les prestations ponctuelles sont facturées soit au forfait,
+    soit en pourcentage du montant des travaux coordonnés
+    (généralement 8 à 10 %).
+  </p>
 </section>
 
-<footer>
-    <p>© 2026 ImmoSérénité – Tous droits réservés</p>
+<section class="credibilite">
+  <h2>Une approche adaptée aux professionnels</h2>
+  <p>
+    Nos méthodes répondent aux exigences des **études notariales, agences immobilières
+    et investisseurs institutionnels** : traçabilité, neutralité, confidentialité
+    et communication formalisée.
+  </p>
+</section>
+
+<footer class="footer">
+  © 2026 – Conciergerie • Gestion locative professionnelle
 </footer>
-
-<script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-active');
-    hamburger.classList.toggle('toggle');
-});
-</script>
 
 </body>
 </html>
