@@ -3,137 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logements vacants – ImmoSérénité</title>
+  <title>Logements Vacants - ImmoSérénité</title>
   <link rel="stylesheet" href="logements-vacants.css">
 </head>
-
 <body>
-
-<header class="header">
-  <div class="header-container">
-    <img src="assets/logo1.png" alt="ImmoSérénité" class="logo">
-
-    <nav class="nav">
-      <a href="index.html">Accueil</a>
-      <a href="gestion-locative.html">Gestion locative</a>
-      <a href="logements-vacants.html" class="active">Logements vacants</a>
-      <a href="coordination.html">Coordination</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <img src="logo1.png" alt="ImmoSérénité" class="logo">
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="gestion-locative.html">Gestion locative</a>
+        <a href="logements-vacants.html" class="active">Logements vacants</a>
+        <a href="coordination.html">Coordination</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Suivi de logements vacants<br><span>en toute sérénité</span></h1>
-    <p>
-      Surveillance, visites et valorisation de biens inoccupés.<br>
-      Une solution discrète, rigoureuse et sans engagement juridique.
-    </p>
-  </div>
-</section>
-
-<!-- PACKS -->
-<section class="section">
-  <h2>Nos packs logements vacants</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Pack Essentiel</h3>
-      <p class="price">49 € / mois</p>
-      <ul>
-        <li>1 visite de contrôle mensuelle</li>
-        <li>Vérification visuelle intérieure & extérieure</li>
-        <li>Aération du logement</li>
-        <li>Contrôle basique eau & électricité</li>
-        <li>Compte-rendu simple</li>
-      </ul>
+  <!-- HERO -->
+  <section class="hero" style="background-image: url('vacant.png');">
+    <div class="hero-overlay">
+      <h1>Suivi de logements vacants en toute sérénité</h1>
+      <p>Surveillance, visites et valorisation des biens inoccupés. Une solution discrète, rigoureuse et sans engagement juridique.</p>
     </div>
+  </section>
 
-    <div class="card featured">
-      <h3>Pack Sérénité</h3>
-      <p class="price">79 € / mois</p>
-      <ul>
-        <li>2 visites mensuelles</li>
-        <li>Aération & ouverture des volets</li>
-        <li>Contrôle renforcé des points sensibles</li>
-        <li>Coordination prestataires (sans engagement)</li>
-        <li>Rapport détaillé avec photos</li>
-      </ul>
+  <!-- NOS PACKS -->
+  <section class="services">
+    <h2>Nos packs</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Pack Maison individuelle</h3>
+          <p><span>150€/mois</span></p>
+          <ul>
+            <li>Surveillance régulière du logement</li>
+            <li>Rapport mensuel simplifié</li>
+            <li>Coordination des intervenants</li>
+          </ul>
+          <button>Découvrir</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Pack Lot 5 maisons</h3>
+          <p><span>250€/mois</span></p>
+          <ul>
+            <li>Suivi des 5 logements</li>
+            <li>Rapports centralisés détaillés</li>
+            <li>Assistance prioritaire</li>
+          </ul>
+          <button>Découvrir</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Pack Professionnel / Cabinet</h3>
+          <p><span>Sur devis</span></p>
+          <ul>
+            <li>Suivi complet multi-biens</li>
+            <li>Rapports détaillés pour professionnels</li>
+            <li>Coordination haut de gamme</li>
+            <li>Assistance administrative</li>
+          </ul>
+          <button>Découvrir</button>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Pack Patrimoine</h3>
-      <p class="price">119 € / mois</p>
-      <ul>
-        <li>4 visites mensuelles</li>
-        <li>Suivi renforcé & alertes</li>
-        <li>Coordination entretien courant</li>
-        <li>Présence lors d’interventions techniques</li>
-        <li>Rapport mensuel complet</li>
-      </ul>
+  <!-- SERVICES COMPLÉMENTAIRES -->
+  <section class="services-extra">
+    <h2>Services complémentaires / Hors pack</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Visites ponctuelles</h3>
+          <p><span>25€/intervention</span></p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Rapport détaillé</h3>
+          <p><span>15€/logement</span></p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-text">
+          <h3>Valorisation du logement</h3>
+          <p><span>50€/intervention</span></p>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 – ImmoSérénité</p>
+  </footer>
 
-<!-- SERVICES -->
-<section class="section dark">
-  <h2>Services complémentaires</h2>
-
-  <div class="services">
-
-    <div class="service">
-      <h4>Visite ponctuelle</h4>
-      <p>25 € / visite</p>
-      <span>Contrôle visuel + compte-rendu</span>
-    </div>
-
-    <div class="service">
-      <h4>Coordination entretien</h4>
-      <p>À partir de 20 €</p>
-      <span>Mise en relation & suivi prestataire</span>
-    </div>
-
-    <div class="service">
-      <h4>Reportage photo</h4>
-      <p>30 €</p>
-      <span>État visuel non réglementaire</span>
-    </div>
-
-    <div class="service">
-      <h4>Valorisation du bien</h4>
-      <p>À partir de 50 €</p>
-      <span>Conseils & préparation visuelle</span>
-    </div>
-
-  </div>
-</section>
-
-<footer class="footer">
-  <p>
-    ImmoSérénité – Suivi & valorisation immobilière<br>
-    Aucun acte juridique, aucune représentation légale.
-  </p>
-</footer>
-
-<script>
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav');
-
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-</script>
-
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+    }
+  </script>
 </body>
-  </html>
+</html>
