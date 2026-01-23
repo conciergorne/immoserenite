@@ -1,6 +1,6 @@
-/* =========================
-   RESET & BASE
-========================= */
+/* ===============================
+   RESET
+================================ */
 * {
     margin: 0;
     padding: 0;
@@ -8,33 +8,30 @@
 }
 
 body {
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
-    color: #222;
-    background: #f6f7f9;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: #0f0f0f;
+    color: #eaeaea;
     line-height: 1.6;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* =========================
-   HEADER & NAVIGATION
-========================= */
+/* ===============================
+   HEADER FIXE – ULTRA PREMIUM
+================================ */
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 999;
-    background: rgba(255,255,255,0.97);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212,160,23,0.25);
 }
 
 .nav-container {
     max-width: 1200px;
     margin: auto;
-    padding: 12px 16px;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,101 +39,113 @@ header {
 
 /* LOGO */
 .logo img {
-    height: 42px;
+    height: 38px;
     width: auto;
 }
 
-/* MENU */
+/* ===============================
+   MENU DESKTOP
+================================ */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 24px;
+    gap: 28px;
 }
 
 nav a {
     text-decoration: none;
-    font-weight: 600;
-    color: #222;
-    padding-bottom: 4px;
+    font-weight: 500;
+    color: #eaeaea;
+    position: relative;
 }
 
-nav a.active,
-nav a:hover {
-    color: #d4a017;
-    border-bottom: 2px solid #d4a017;
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #d4a017, #ffdf7e);
+    transition: width 0.3s ease;
 }
 
-/* HAMBURGER */
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+/* ===============================
+   HAMBURGER
+================================ */
 .menu-toggle {
     display: none;
-    font-size: 26px;
-    cursor: pointer;
-}
-
-/* =========================
-   HERO IMAGE
-========================= */
-.hero {
-    max-width: 1200px;
-    margin: 24px auto;
-    padding: 0 16px;
-}
-
-.hero img {
-    border-radius: 14px;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-section {
-    max-width: 1200px;
-    margin: 48px auto;
-    padding: 0 16px;
-}
-
-h2 {
     font-size: 28px;
-    margin-bottom: 24px;
+    cursor: pointer;
+    color: #d4a017;
 }
 
-/* =========================
-   PACKS
-========================= */
+/* ===============================
+   HERO OFFSET (IMPORTANT)
+================================ */
+main {
+    padding-top: 90px;
+}
+
+/* ===============================
+   HERO IMAGE
+================================ */
+.hero img {
+    border-radius: 18px;
+}
+
+/* ===============================
+   TITRES
+================================ */
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* ===============================
+   PACKS – ULTRA PREMIUM
+================================ */
 .packs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
 }
 
 .pack {
-    background: white;
-    border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(145deg, #161616, #0b0b0b);
+    border-radius: 22px;
+    padding: 26px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid rgba(212,160,23,0.25);
 }
 
 .pack:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(212,160,23,0.25);
 }
 
 .pack h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .pack .price {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: #d4a017;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .pack ul {
-    margin-bottom: 20px;
     padding-left: 18px;
+    margin-bottom: 22px;
 }
 
 .pack li {
@@ -145,34 +154,33 @@ h2 {
 
 .pack button {
     width: 100%;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 14px;
+    border-radius: 14px;
     border: none;
-    background: #111;
-    color: white;
-    font-weight: 600;
+    background: linear-gradient(135deg, #d4a017, #ffdf7e);
+    color: #111;
+    font-weight: 700;
     cursor: pointer;
 }
 
 .pack button:hover {
-    background: #d4a017;
-    color: #111;
+    opacity: 0.9;
 }
 
-/* =========================
+/* ===============================
    SERVICES HORS PACK
-========================= */
+================================ */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    gap: 24px;
 }
 
 .service {
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    background: #141414;
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid rgba(212,160,23,0.2);
 }
 
 .service h4 {
@@ -181,59 +189,55 @@ h2 {
 }
 
 .service .price {
-    color: #d4a017;
-    font-weight: 700;
-    margin-bottom: 10px;
+    color: #ffdf7e;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .service button {
-    margin-top: 12px;
-    padding: 10px;
     width: 100%;
-    border-radius: 8px;
-    border: 1px solid #111;
-    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    background: transparent;
+    border: 1px solid #d4a017;
+    color: #d4a017;
     cursor: pointer;
     font-weight: 600;
 }
 
 .service button:hover {
-    background: #111;
-    color: white;
+    background: #d4a017;
+    color: #111;
 }
 
-/* =========================
+/* ===============================
    FOOTER
-========================= */
+================================ */
 footer {
-    background: #111;
-    color: white;
+    background: #0b0b0b;
     text-align: center;
-    padding: 24px;
-    margin-top: 60px;
+    padding: 26px;
+    margin-top: 80px;
+    color: #aaa;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ===============================
+   MOBILE MENU + ANIMATION
+================================ */
 @media (max-width: 768px) {
-
-    .logo img {
-        height: 34px;
-    }
 
     nav ul {
         position: absolute;
-        top: 64px;
+        top: 72px;
         left: 0;
-        right: 0;
-        background: white;
+        width: 100%;
         flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        padding: 20px 0;
+        background: #0f0f0f;
+        gap: 18px;
+        padding: 24px 0;
         display: none;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        animation: slideDown 0.35s ease forwards;
+        border-bottom: 1px solid rgba(212,160,23,0.3);
     }
 
     nav ul.active {
@@ -246,5 +250,19 @@ footer {
 
     h2 {
         font-size: 24px;
+    }
+}
+
+/* ===============================
+   ANIMATION MENU
+================================ */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
