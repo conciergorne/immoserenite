@@ -33,13 +33,13 @@ html,body { width:100%; overflow-x:hidden; font-family:-apple-system,BlinkMacSys
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45); /* overlay légèrement foncé */
+  background: rgba(0,0,0,0.55); /* overlay plus sombre pour contraste */
 }
 
 .hero-overlay {
   position: relative;
-  background: rgba(255,255,255,0.02); /* léger effet glass */
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.3); /* fond semi-opaque derrière le texte */
+  backdrop-filter: blur(10px); /* effet glass premium */
   padding: 48px 28px;
   text-align: center;
   max-width: 760px;
@@ -47,52 +47,13 @@ html,body { width:100%; overflow-x:hidden; font-family:-apple-system,BlinkMacSys
   animation: fadeUp 1s ease forwards;
 }
 
-.hero h1 {
-  color: #ffffff; /* blanc pur */
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* ombre pour lisibilité */
-  font-size: 2.3rem;
-  margin-bottom: 16px;
-  line-height: 1.25;
+.hero h1, .hero p {
+  color: #ffffff; /* texte blanc pur */
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7); /* ombre prononcée pour lisibilité */
 }
 
-.hero p {
-  color: #ffffff; /* blanc pur */
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* ombre pour lisibilité */
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Overlay renforcé pour contraste */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45); /* légèrement plus foncé pour faire ressortir le texte */
-}
-
-.hero-overlay {
-  position: relative;
-  background: rgba(255,255,255,0.02); /* léger effet glass */
-  backdrop-filter: blur(8px);
-  padding: 48px 28px;
-  text-align: center;
-  max-width: 760px;
-  border-radius: 14px;
-  animation: fadeUp 1s ease forwards;
-}
-
-.hero h1 {
-  color: #ffffff; /* texte en blanc */
-  font-size: 2.3rem;
-  margin-bottom: 16px;
-  line-height: 1.25;
-}
-
-.hero p {
-  color: #ffffff; /* texte en blanc */
-  font-size: 1rem;
-  line-height: 1.6;
-}
+.hero h1 { font-size:2.3rem; margin-bottom:16px; line-height:1.25; }
+.hero p { font-size:1rem; line-height:1.6; }
 
 /* DESCRIPTION */
 .description { max-width:800px; margin:50px auto 70px auto; text-align:center; font-size:1rem; line-height:1.6; }
@@ -129,4 +90,11 @@ html,body { width:100%; overflow-x:hidden; font-family:-apple-system,BlinkMacSys
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
 
 /* MOBILE */
-@media (max-width:768px){ .nav{display:none;} .burger{display:flex;} .hero{min-height:60vh;} .hero h1{font-size:1.8rem;} .hero-overlay{padding:36px 22px;} .services,.complementary-services{margin:55px auto;} }
+@media (max-width:768px){
+  .nav{display:none;}
+  .burger{display:flex;}
+  .hero{min-height:60vh;}
+  .hero h1{font-size:1.8rem;}
+  .hero-overlay{padding:36px 22px;}
+  .services,.complementary-services{margin:55px auto;}
+  }
