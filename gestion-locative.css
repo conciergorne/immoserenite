@@ -1,4 +1,6 @@
+/* =================== */
 /* RESET PROPRE */
+/* =================== */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,9 @@ html, body {
   color: #1a1a1a;
 }
 
-/* HEADER */
+/* =================== */
+/* HEADER + MENU */
+/* =================== */
 .header {
   background: rgba(255,255,255,0.95);
   border-bottom: 1px solid #eee;
@@ -65,7 +69,30 @@ html, body {
   transition: all 0.3s ease;
 }
 
-/* HERO PREMIUM */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px,5px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px,-6px);
+}
+
+.nav.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.98);
+  padding: 20px;
+}
+
+/* =================== */
+/* HERO */
+/* =================== */
 .hero {
   width: 100%;
   min-height: 70vh;
@@ -107,6 +134,7 @@ html, body {
   line-height: 1.6;
 }
 
+/* =================== */
 /* DESCRIPTION */
 .description {
   max-width: 800px;
@@ -116,6 +144,7 @@ html, body {
   line-height: 1.6;
 }
 
+/* =================== */
 /* SERVICES / PACKS */
 .services {
   max-width: 1200px;
@@ -135,15 +164,15 @@ html, body {
   gap: 30px;
 }
 
-/* CARDS PREMIUM */
+/* CARDS */
 .service-card {
   border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   box-shadow: 0 14px 40px rgba(0,0,0,0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
   background: linear-gradient(145deg, #fffdf9, #fff8f2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -186,9 +215,8 @@ html, body {
 
 .service-text li {
   margin-bottom: 8px;
-}
 
-/* BOUTONS PREMIUM */
+/* BOUTONS */
 .btn {
   display: inline-block;
   background: #caa24d;
