@@ -1,57 +1,49 @@
-/* Reset & basics */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-body { background: #f7f7f7; color: #111; }
+/* RESET */
+* {margin:0; padding:0; box-sizing:border-box;}
+html, body {width:100%; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:#fff; color:#1a1a1a;}
 
-/* Header */
-header {
-    width: 100%;
-    background: #111;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    padding: 0.5rem 2rem;
+/* HEADER */
+.header {background:#fff; position:sticky; top:0; z-index:1000; border-bottom:1px solid #eee;}
+.nav-container {max-width:1200px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:14px 20px;}
+.logo {height:42px;}
+.nav a {margin-left:20px; text-decoration:none; color:#333; font-size:0.95rem; transition:color 0.3s ease;}
+.nav a:hover, .nav a.active {color:#caa24d;}
+.hamburger {display:none; cursor:pointer; font-size:1.5rem;}
+
+/* HERO */
+.hero {width:100%; min-height:70vh; background:center/cover no-repeat; display:flex; align-items:center; justify-content:center; position:relative;}
+.hero-overlay {background:rgba(0,0,0,0.48); padding:48px 28px; text-align:center; max-width:760px; border-radius:12px; animation:fadeUp 1s ease forwards;}
+.hero h1 {color:#fff; font-size:2.3rem; margin-bottom:16px; line-height:1.25;}
+.hero p {color:#eaeaea; font-size:1rem; line-height:1.6;}
+
+/* SECTIONS */
+.intro {max-width:900px; margin:50px auto; padding:0 20px; text-align:center;}
+.intro p {font-size:1rem; line-height:1.6;}
+.services {max-width:1200px; margin:70px auto; padding:0 20px;}
+.services h2 {text-align:center; margin-bottom:45px; font-size:1.85rem;}
+.services-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;}
+.service-card {background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 12px 35px rgba(0,0,0,0.08); transition: transform 0.35s, box-shadow 0.35s; animation:fadeUp 1.2s ease forwards;}
+.service-card:hover {transform:translateY(-8px); box-shadow:0 22px 55px rgba(0,0,0,0.14);}
+.service-text {padding:24px;}
+.service-text h3 {margin-bottom:10px; font-size:1.25rem;}
+.service-text p {font-size:0.95rem; color:#555; margin-bottom:16px;}
+.service-text span {color:#caa24d; font-weight:600;}
+.service-text ul {margin:10px 0 16px 20px;}
+.service-text li {margin-bottom:6px;}
+.service-text button {background:#caa24d; color:#fff; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; transition:0.3s;}
+.service-text button:hover {background:#b18c3e;}
+
+/* FOOTER */
+.footer {text-align:center; padding:34px 20px; background:#f7f7f7; font-size:0.85rem; color:#666;}
+
+/* ANIMATIONS */
+@keyframes fadeUp {from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);}}
+
+@media (max-width:768px) {
+  .nav {display:none; flex-direction:column;}
+  .hamburger {display:block;}
+  .hero {min-height:60vh;}
+  .hero h1 {font-size:1.8rem;}
+  .hero-overlay {padding:36px 22px;}
+  .services {margin:55px auto;}
 }
-.header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
-.logo { height: 50px; object-fit: contain; }
-
-/* Navigation */
-.nav-links { list-style: none; display: flex; gap: 1.5rem; }
-.nav-links li a { text-decoration: none; color: #fff; font-weight: bold; }
-.nav-links li a.active { border-bottom: 3px solid #d4af37; padding-bottom: 2px; }
-.burger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-.burger div { width: 25px; height: 3px; background: #fff; border-radius: 2px; }
-
-/* Hero */
-.hero { background: url('gestion.png') center/cover no-repeat; height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 1rem; margin-top: 70px; }
-.hero-overlay { background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 10px; color: #fff; }
-.hero-overlay h1 { font-size: 2rem; margin-bottom: 1rem; }
-.hero-overlay p { font-size: 1rem; }
-
-/* Packs */
-.packs { padding: 4rem 1rem; max-width: 1200px; margin: auto; }
-.packs h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
-.pack { background: #111; color: #fff; padding: 1.5rem; border-radius: 10px; margin: 1rem 0; box-shadow: 0 0 20px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.pack:hover { transform: translateY(-5px); box-shadow: 0 0 30px rgba(212,175,55,0.8); }
-.pack h3 { color: #d4af37; font-size: 1.5rem; margin-bottom: 0.5rem; }
-.pack .price { font-weight: bold; margin-bottom: 0.5rem; }
-.pack ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
-.pack button { background: #d4af37; color: #111; border: none; padding: 0.5rem 1rem; cursor: pointer; border-radius: 5px; transition: 0.3s; }
-.pack button:hover { background: #fff; }
-
-/* Services hors pack */
-.services-hors-pack { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
-.services-hors-pack h2 { font-size: 1.8rem; text-align: center; margin-bottom: 2rem; }
-.service { background: #222; color: #d4af37; padding: 1rem 1.5rem; border-radius: 10px; margin-bottom: 1rem; transition: transform 0.3s; }
-.service:hover { transform: translateY(-5px); box-shadow: 0 0 20px rgba(212,175,55,0.6); }
-.service h3 { margin-bottom: 0.5rem; }
-.service p { color: #fff; margin-bottom: 0.5rem; }
-.service button { background: #d4af37; color: #111; border: none; padding: 0.3rem 0.8rem; cursor: pointer; border-radius: 5px; }
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .nav-links { display: none; flex-direction: column; background: #111; width: 100%; position: absolute; top: 70px; left: 0; }
-    .nav-links.active { display: flex; }
-    .burger { display: flex; }
-    .hero-overlay h1 { font-size: 1.5rem; }
-  }
