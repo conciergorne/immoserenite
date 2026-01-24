@@ -115,7 +115,11 @@
   font-weight: 600;
   color: #caa24d;
 }
-
+/* Service Notaire / Succession */
+.service-card img[alt="Services Notaire & Succession"] {
+  height: 185px; /* même que les autres cartes */
+  object-fit: cover;
+  }
 /* ================== ANIMATIONS ================== */
 @keyframes fadeUp {
   from {
