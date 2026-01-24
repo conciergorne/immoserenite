@@ -215,15 +215,17 @@ html, body {
 
 .service-text li {
   margin-bottom: 8px;
+}
 
+/* =================== */
 /* BOUTONS */
 .btn {
   display: inline-block;
   background: #caa24d;
-  color: #fff;
+  color: #fff !important;
   padding: 10px 20px;
   border-radius: 10px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -232,6 +234,15 @@ html, body {
   background: #b18d3e;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* FIX NAVIGATION LIENS ET BOUTONS */
+a.btn:link,
+a.btn:visited,
+a.btn:active,
+a.btn:focus {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 /* FOOTER */
@@ -257,4 +268,4 @@ html, body {
   .hero h1 { font-size: 1.8rem; }
   .hero-overlay { padding: 36px 22px; }
   .services { margin: 55px auto; }
-  }
+}
