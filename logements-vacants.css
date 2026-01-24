@@ -171,7 +171,7 @@ html, body {
   text-decoration: none;
   color: inherit;
   box-shadow: 0 14px 40px rgba(0,0,0,0.08);
-  background: #1a1a1a; /* Pack noir */
+  background: #1a1a1a; /* Fond noir pour pack premium */
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   opacity: 0;
   transform: translateY(30px);
@@ -216,6 +216,7 @@ html, body {
 
 .service-text li {
   margin-bottom: 8px;
+}
 
 /* DESCRIPTION POUR LES SERVICES COMPLÉMENTAIRES */
 .service-text p {
@@ -265,4 +266,4 @@ html, body {
   .hero h1 { font-size: 1.8rem; }
   .hero-overlay { padding: 36px 22px; }
   .services { margin: 55px auto; }
-     }
+           }
