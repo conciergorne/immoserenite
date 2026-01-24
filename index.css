@@ -1,59 +1,3 @@
-/* ================== RESET GLOBAL ================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #ffffff;
-  color: #1a1a1a;
-  line-height: 1.6;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* ================== HEADER / NAV ================== */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  height: 42px;
-  display: block;
-}
-
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover,
-.nav a.active {
-  color: #caa24d;
-}
-
 /* ================== HERO ================== */
 .hero {
   width: 100%;
@@ -82,7 +26,7 @@ body {
 }
 
 .hero p {
-  color: #eaeaea;
+  color: #fff;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -92,7 +36,6 @@ body {
   max-width: 1200px;
   margin: 70px auto;
   padding: 0 20px;
-  display: block;
 }
 
 .services h2 {
@@ -108,26 +51,27 @@ body {
 }
 
 .service-card {
-  background: #fff;
-  border-radius: 16px;
-  overflow: visible; /* CORRECTION */
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  overflow: visible;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   animation: fadeUp 1.2s ease forwards;
-  min-height: auto; /* CORRECTION */
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.14);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
 }
 
 .service-card img {
   width: 100%;
   height: 185px;
   object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .service-text {
@@ -149,15 +93,6 @@ body {
 .service-text span {
   font-weight: 600;
   color: #caa24d;
-}
-
-/* ================== FOOTER ================== */
-.footer {
-  text-align: center;
-  padding: 34px 20px;
-  background: #f7f7f7;
-  font-size: 0.85rem;
-  color: #666;
 }
 
 /* ================== ANIMATIONS ================== */
