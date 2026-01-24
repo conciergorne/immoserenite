@@ -18,38 +18,61 @@
   animation: fadeUp 1s ease forwards;
 }
 
-.hero h1 {
+.hero h1, .hero p {
   color: #fff;
+}
+
+.hero h1 {
   font-size: 2.3rem;
   margin-bottom: 16px;
   line-height: 1.25;
 }
 
 .hero p {
-  color: #fff;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* ================== ZONE D'INTERVENTION PREMIUM ================== */
-.zone-intervention {
-  max-width: 800px;
-  margin: 30px auto;
-  text-align: center;
-  background: rgba(42, 28, 12, 0.6); /* overlay sombre */
-  padding: 15px 20px;
-  border-radius: 12px;
-  border: 2px solid #caa24d; /* doré premium */
-  color: #fff;
+/* ================== MENU EN BLOCS ================== */
+.nav-blocks {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.nav-block {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #f8f8f8;
+  color: #1e1e1e;
   font-weight: 600;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.zone-intervention:hover {
-  background: rgba(42, 28, 12, 0.75);
-  box-shadow: 0 0 15px rgba(202, 162, 77, 0.6);
+.nav-block:hover, .nav-block.active {
+  background: #caa24d;
+  color: #1e1e1e;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* ================== ZONE D'INTERVENTION ================== */
+.zone {
+  text-align: center;
+  background: #fdf6e3;
+  padding: 25px 15px;
+  margin-top: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zone-container p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e1e1e;
 }
 
 /* ================== SERVICES ================== */
@@ -114,58 +137,40 @@
 .service-text span {
   font-weight: 600;
   color: #caa24d;
-}
-/* Service Notaire / Succession */
-.service-card img[alt="Services Notaire & Succession"] {
-  height: 185px; /* même que les autres cartes */
-  object-fit: cover;
-  }
-/* Boutons services dorés (uniforme pour tous les services) */
-.services .service-card .btn {
-  background: #caa24d;   /* doré */
-  color: #fff;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.services .service-card .btn:hover {
-  background: #b18d3e;   /* doré foncé au hover */
+/* ================== BOUTON DORÉ ================== */
+.btn-gold {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #caa24d, #e2c878);
+  color: #1e1e1e;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-top: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
 /* ================== ANIMATIONS ================== */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 /* ================== MOBILE ================== */
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-
-  .hero {
-    min-height: 60vh;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-overlay {
-    padding: 36px 22px;
-  }
-
-  .services {
-    margin: 55px auto;
-  }
-
-  .zone-intervention {
-    font-size: 1rem;
-    padding: 12px 16px;
-    margin: 20px auto;
-  }
+  .nav-blocks { flex-direction: column; gap: 10px; margin-left: 0; }
+  .hero { min-height: 60vh; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-overlay { padding: 36px 22px; }
+  .services { margin: 55px auto; }
 }
