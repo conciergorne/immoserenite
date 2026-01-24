@@ -120,6 +120,15 @@
   height: 185px; /* même que les autres cartes */
   object-fit: cover;
   }
+/* Boutons services dorés (uniforme pour tous les services) */
+.services .service-card .btn {
+  background: #caa24d;   /* doré */
+  color: #fff;
+}
+
+.services .service-card .btn:hover {
+  background: #b18d3e;   /* doré foncé au hover */
+}
 /* ================== ANIMATIONS ================== */
 @keyframes fadeUp {
   from {
