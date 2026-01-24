@@ -3,96 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services Notaire / Succession - ImmoSérénité</title>
+  <title>Services Notaire & Succession - ImmoSérénité</title>
   <link rel="stylesheet" href="notaire.css">
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="header">
-    <div class="hero">
-      <div class="hero-overlay">
-        <p>Accompagnement administratif et opérationnel pour notaires et successions</p>
+    <div class="nav-container">
+      <img src="logo1.png" alt="ImmoSérénité" class="logo">
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="gestion-locative.html">Gestion locative</a>
+        <a href="logements-vacants.html">Logements vacants</a>
+        <a href="notaire.html" class="active">Notaire / Succession</a>
+        <a href="devis-contact.html">Devis & Contact</a>
+      </nav>
+      <div class="burger">
+        <span></span><span></span><span></span>
       </div>
     </div>
   </header>
 
-  <!-- PACKS PRINCIPAUX -->
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <!-- Si on veut pas de titre visible, on laisse juste le fond notaire.png -->
+    </div>
+  </section>
+
+  <!-- PHRASE LÉGALE -->
+  <section class="legal-note">
+    <div class="legal-container">
+      <p>
+        ImmoSérénité accompagne les notaires et successions dans la gestion opérationnelle et administrative des biens. 
+        <strong>Nous ne rédigeons pas d’actes officiels ni ne réalisons de démarches légales réglementées.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES / PACKS NOTAIRE -->
   <section class="services">
-    <h2>Nos services spécialisés</h2>
+    <h2>Services pour Notaires & Successions</h2>
     <div class="services-grid">
 
-      <!-- Pack 1 -->
       <div class="service-card pack">
         <div class="service-text">
-          <h3>Intervention ponctuelle</h3>
-          <p>Visites, états des lieux et suivi administratif pour un ou plusieurs biens en succession.</p>
-          <span>40€ / intervention</span>
-          <a href="devis-contact.html" class="btn">Demander un devis</a>
+          <h3>Accompagnement pour notaires</h3>
+          <p>Gestion administrative complète, inventaires détaillés et coordination des prestataires pour les dossiers de succession.</p>
+          <span>À partir de 40€ / intervention</span>
+          <a href="devis-contact.html" class="btn">Découvrir</a>
         </div>
       </div>
 
-      <!-- Pack 2 -->
       <div class="service-card pack">
         <div class="service-text">
-          <h3>Suivi mensuel</h3>
-          <p>Coordination et suivi régulier des biens avec rapports mensuels simplifiés pour notaires.</p>
-          <span>90€ / mois / bien</span>
-          <a href="devis-contact.html" class="btn">Demander un devis</a>
-        </div>
-      </div>
-
-      <!-- Pack 3 -->
-      <div class="service-card pack">
-        <div class="service-text">
-          <h3>Dossier complet succession</h3>
-          <p>Inventaire complet du patrimoine immobilier, photographies détaillées et coordination multi-prestataires.</p>
+          <h3>Dossiers complets succession</h3>
+          <p>Inventaires complets, photographies détaillées et suivi des biens avec rapports adaptés aux besoins des notaires.</p>
           <span>Sur devis</span>
-          <a href="devis-contact.html" class="btn">Contactez-nous</a>
+          <a href="devis-contact.html" class="btn">Découvrir</a>
+        </div>
+      </div>
+
+      <div class="service-card pack">
+        <div class="service-text">
+          <h3>Gestion temporaire des biens</h3>
+          <p>Surveillance et coordination pour les biens en succession ou en attente de transfert, interventions ponctuelles selon besoins.</p>
+          <span>À partir de 50€ / intervention</span>
+          <a href="devis-contact.html" class="btn">Découvrir</a>
         </div>
       </div>
 
     </div>
-  </section>
-
-  <!-- SERVICES COMPLÉMENTAIRES -->
-  <section class="complementary-services">
-    <h2>Services complémentaires sur-mesure</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-text">
-          <h3>État des lieux complet</h3>
-          <p>Rapports détaillés pour chaque logement ou local de succession.</p>
-          <span>50€/logement</span>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-text">
-          <h3>Inventaire photographique</h3>
-          <p>Prise de photos et inventaire détaillé pour sécuriser les biens et simplifier la gestion.</p>
-          <span>30 à 50€/bien</span>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-text">
-          <h3>Gestion d'interventions spécifiques</h3>
-          <p>Coordination de travaux ponctuels ou interventions urgentes selon les besoins de la succession.</p>
-          <span>35 à 50€/intervention</span>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-text">
-          <h3>Rapport détaillé de suivi</h3>
-          <p>Résumé précis de toutes les actions réalisées pour chaque bien.</p>
-          <span>20€/rapport</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ZONE D'INTERVENTION -->
-  <section class="zone">
-    <p>Zone d'intervention : jusqu'à 120 km autour de Bagnoles-de-l'Orne et services à distance. Solutions personnalisées adaptées à vos besoins spécifiques.</p>
   </section>
 
   <!-- FOOTER -->
@@ -100,5 +82,7 @@
     &copy; 2026 ImmoSérénité - Tous droits réservés
   </footer>
 
+  <!-- JS -->
+  <script src="gestion-locative.js"></script>
 </body>
-                                         </html>
+    </html>
