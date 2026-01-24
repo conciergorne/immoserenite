@@ -9,17 +9,20 @@
 </head>
 <body>
 
-  <!-- HEADER / NAV -->
+  <!-- HEADER / NAV en blocs -->
   <header class="header">
     <div class="nav-container">
       <img src="logo1.png" alt="Logo ImmoSérénité" class="logo">
-      <nav class="nav">
-        <a href="index.html" class="active">Accueil</a>
-        <a href="gestion-locative.html">Gestion locative</a>
-        <a href="logements-vacants.html">Logements vacants</a>
-        <a href="notaire.html">Notaire& succession</a>
-        <a href="devis-contact.html">Devis & Contact</a>
+      <nav class="nav-blocks">
+        <a href="index.html" class="nav-block active">Accueil</a>
+        <a href="gestion-locative.html" class="nav-block">Gestion locative</a>
+        <a href="logements-vacants.html" class="nav-block">Logements vacants</a>
+        <a href="notaire.html" class="nav-block">Notaire / Succession</a>
+        <a href="devis-contact.html" class="nav-block">Devis & Contact</a>
       </nav>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
 
@@ -27,63 +30,68 @@
   <section class="hero">
     <div class="hero-overlay">
       <h1>Bienvenue chez ImmoSérénité</h1>
-      <p>Gestion locative, logements vacants et coordination de prestataires, en toute sérénité.</p>
+      <p>Gestion locative, logements vacants et services pour notaires, en toute sérénité.</p>
     </div>
   </section>
 
-  <!-- PHRASE ZONE D'INTERVENTION -->
-  <section class="hero-overlay" style="max-width:800px; margin:30px auto; text-align:center;">
-    <p style="color:#fff; font-weight:600; font-size:1.1rem; line-height:1.5; background: rgba(42,28,12,0.6); padding:15px 20px; border-radius:12px; border:2px solid #caa24d;">
-      Nous intervenons jusqu’à <strong>120 km autour de Bagnoles-de-l’Orne</strong>, incluant <strong>Alençon, Flers, Domfront et Vire</strong>, pour un suivi rapide et un service premium.
-    </p>
+  <!-- ZONE D'INTERVENTION -->
+  <section class="zone">
+    <div class="zone-container">
+      <p>
+        Nous intervenons jusqu’à <strong>120 km autour de Bagnoles-de-l'Orne</strong>, incluant Flers, Alençon, Le Mans et leurs environs.
+      </p>
+    </div>
   </section>
 
   <!-- SERVICES -->
-  <!-- ================== NOS SERVICES AMÉLIORÉ ================== -->
+  <section class="services">
+    <h2>Nos services</h2>
+    <div class="services-grid">
 
-<!-- SERVICE 1 : Gestion locative -->
-<a href="gestion-locative.html" class="service-card">
-  <img src="gestion.png" alt="Gestion locative">
-  <div class="service-text">
-    <h3>Gestion locative</h3>
-    <p>Nous prenons en charge la gestion complète de vos biens, du suivi des loyers à l’entretien, pour vous libérer de toutes les contraintes quotidiennes.</p>
-    <span>À partir de 80€ / maison</span>
-    <a href="gestion-locative.html" class="btn-gold">Découvrir</a>
-  </div>
-</a>
+      <!-- SERVICE 1 : Gestion locative -->
+      <a href="gestion-locative.html" class="service-card">
+        <img src="gestion.png" alt="Gestion locative">
+        <div class="service-text">
+          <h3>Gestion locative</h3>
+          <p>Nous prenons en charge la gestion complète de vos biens, du suivi des loyers à l’entretien, pour vous libérer de toutes les contraintes quotidiennes.</p>
+          <span>À partir de 80€ / maison</span>
+          <a href="gestion-locative.html" class="btn-gold">Découvrir</a>
+        </div>
+      </a>
 
-<!-- SERVICE 2 : Logements vacants -->
-<a href="logements-vacants.html" class="service-card">
-  <img src="vacant.png" alt="Logements vacants">
-  <div class="service-text">
-    <h3>Logements vacants</h3>
-    <p>Surveillance régulière, entretien et suivi pour éviter dégradations et pertes, avec rapports détaillés pour chaque visite.</p>
-    <span>À partir de 50€ / logement</span>
-    <a href="logements-vacants.html" class="btn-gold">Découvrir</a>
-  </div>
-</a>
+      <!-- SERVICE 2 : Logements vacants -->
+      <a href="logements-vacants.html" class="service-card">
+        <img src="vacant.png" alt="Logements vacants">
+        <div class="service-text">
+          <h3>Logements vacants</h3>
+          <p>Surveillance régulière, entretien et suivi pour éviter dégradations et pertes, avec rapports détaillés pour chaque visite.</p>
+          <span>À partir de 50€ / logement</span>
+          <a href="logements-vacants.html" class="btn-gold">Découvrir</a>
+        </div>
+      </a>
 
-<!-- SERVICE 3 : Notaire / Succession -->
-<a href="notaire.html" class="service-card">
-  <img src="notaire.png" alt="Notaire & Succession">
-  <div class="service-text">
-    <h3>Notaire / Succession</h3>
-    <p>Accompagnement complet pour les notaires et successions : inventaires, rapports détaillés, coordination des prestataires. <strong>Nous ne réalisons aucun acte légal ni démarche officielle.</strong></p>
-    <span>Tarifs sur demande</span>
-    <a href="notaire.html" class="btn-gold">Découvrir</a>
-  </div>
-</a>
+      <!-- SERVICE 3 : Notaire / Succession -->
+      <a href="notaire.html" class="service-card">
+        <img src="notaire.png" alt="Notaire & Succession">
+        <div class="service-text">
+          <h3>Notaire / Succession</h3>
+          <p>Accompagnement complet pour les notaires et successions : inventaires, rapports détaillés, coordination des prestataires. <strong>Nous ne réalisons aucun acte légal ni démarche officielle.</strong></p>
+          <span>Tarifs sur demande</span>
+          <a href="notaire.html" class="btn-gold">Découvrir</a>
+        </div>
+      </a>
 
-<!-- SERVICE 4 : Devis & Contact -->
-<a href="devis-contact.html" class="service-card">
-  <img src="devis.png" alt="Devis & Contact">
-  <div class="service-text">
-    <h3>Devis & Contact</h3>
-    <p>Demandez votre devis personnalisé ou contactez-nous directement pour toute question. Réponse rapide garantie.</p>
-    <span>Réponse rapide</span>
-    <a href="devis-contact.html" class="btn-gold">Devis</a>
-  </div>
-</a>
+      <!-- SERVICE 4 : Devis & Contact -->
+      <a href="devis-contact.html" class="service-card">
+        <img src="devis.png" alt="Devis & Contact">
+        <div class="service-text">
+          <h3>Devis & Contact</h3>
+          <p>Demandez votre devis personnalisé ou contactez-nous directement pour toute question. Réponse rapide garantie.</p>
+          <span>Réponse rapide</span>
+          <a href="devis-contact.html" class="btn-gold">Devis</a>
+        </div>
+      </a>
+
     </div>
   </section>
 
