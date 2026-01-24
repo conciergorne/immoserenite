@@ -3,30 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion Locative - ImmoSérénité</title>
+  <title>ImmoSérénité - Gestion locative</title>
   <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="gestion-locative.css">
   <script src="gestion-locative.js" defer></script>
 </head>
 <body>
-  <!-- HEADER -->
+
+  <!-- HEADER / NAV -->
   <header class="header">
     <div class="nav-container">
       <img src="logo1.png" alt="Logo ImmoSérénité" class="logo">
       <nav class="nav">
         <a href="index.html">Accueil</a>
-        <a href="gestion-locative.html">Gestion Locative</a>
-        <a href="logements-vacants.html">Logements Vacants</a>
+        <a href="gestion-locative.html" class="active">Gestion locative</a>
+        <a href="logements-vacants.html">Logements vacants</a>
         <a href="coordination.html">Coordination</a>
         <a href="devis-contact.html">Devis & Contact</a>
       </nav>
-      <div class="menu-toggle">&#9776;</div>
     </div>
   </header>
 
-  <!-- CONTENU EXACT VALIDÉ DE GESTION LOCATIVE -->
-  <!-- ... packs, services, boutons ... -->
-  <!-- Assurez-vous que tous les boutons ont class="btn-devis" -->
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Gestion locative simplifiée</h1>
+      <p>Suivi complet de vos biens et sérénité assurée.</p>
+    </div>
+  </section>
+
+  <!-- PACKS -->
+  <section class="services">
+    <h2>Nos packs</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="gestion.png" alt="Pack Maison">
+        <div class="service-text">
+          <h3>Pack 1 maison</h3>
+          <p>Gestion complète pour une maison individuelle.</p>
+          <span>80€ / mois</span>
+          <a href="devis-contact.html" class="btn">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="gestion.png" alt="Pack Multi-Maisons">
+        <div class="service-text">
+          <h3>Pack 5 maisons</h3>
+          <p>Gestion complète jusqu'à 5 maisons avec tarif avantageux.</p>
+          <span>350€ / mois</span>
+          <a href="devis-contact.html" class="btn">Demander un devis</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICE COMPLÉMENTAIRE -->
+  <section class="services">
+    <h2>Services complémentaires</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="gestion.png" alt="Visites">
+        <div class="service-text">
+          <h3>Visites et état des lieux</h3>
+          <p>Organisation et suivi des visites et états des lieux.</p>
+          <a href="devis-contact.html" class="btn">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="gestion.png" alt="Suivi locataire">
+        <div class="service-text">
+          <h3>Suivi locataire</h3>
+          <p>Accompagnement complet et communication avec les locataires.</p>
+          <a href="devis-contact.html" class="btn">Demander un devis</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2026 ImmoSérénité - Tous droits réservés
+  </footer>
 
 </body>
-</html>
+  </html>
