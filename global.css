@@ -1,4 +1,4 @@
-/* RESET SAFE GLOBAL */
+/* ================== RESET GLOBAL ================== */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-/* HEADER */
+/* ================== HEADER / NAV ================== */
 .header {
   position: sticky;
   top: 0;
@@ -46,6 +46,7 @@ body {
   text-decoration: none;
   color: #333;
   font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover,
@@ -53,7 +54,7 @@ body {
   color: #caa24d;
 }
 
-/* BASE STRUCTURE */
+/* ================== MAIN / SECTIONS ================== */
 main {
   display: block;
   width: 100%;
@@ -64,7 +65,7 @@ section {
   position: relative;
 }
 
-/* FOOTER */
+/* ================== FOOTER ================== */
 .footer {
   background: #f7f7f7;
   padding: 34px 20px;
@@ -73,7 +74,34 @@ section {
   color: #666;
 }
 
-/* MOBILE */
+/* ================== LISTES, LIENS ================== */
+ul, ol {
+  padding-left: 20px;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ================== ANIMATIONS GLOBALES ================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
   .nav {
     display: none;
