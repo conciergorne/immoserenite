@@ -228,6 +228,8 @@ html, body {
   text-decoration: none !important;
   font-weight: 600;
   transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .btn:hover {
@@ -236,13 +238,16 @@ html, body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* FIX NAVIGATION LIENS ET BOUTONS */
+/* CORRECTION TOTALE LIENS BOUTONS */
+a.btn,
 a.btn:link,
 a.btn:visited,
 a.btn:active,
 a.btn:focus {
   color: #fff !important;
   text-decoration: none !important;
+  background: #caa24d;
+  cursor: pointer;
 }
 
 /* FOOTER */
