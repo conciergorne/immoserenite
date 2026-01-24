@@ -1,26 +1,30 @@
-/* RESET SAFE */
+/* RESET SAFE GLOBAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  min-height: 100%;
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: #ffffff;
   color: #1a1a1a;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* HEADER / NAV */
+/* HEADER */
 .header {
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
 }
 
 .nav-container {
@@ -34,6 +38,7 @@ html, body {
 
 .logo {
   height: 42px;
+  display: block;
 }
 
 .nav a {
@@ -41,7 +46,6 @@ html, body {
   text-decoration: none;
   color: #333;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
 }
 
 .nav a:hover,
@@ -49,17 +53,22 @@ html, body {
   color: #caa24d;
 }
 
-/* BASE CONTENT */
+/* BASE STRUCTURE */
 main {
-  width: 100%;
   display: block;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  position: relative;
 }
 
 /* FOOTER */
 .footer {
-  text-align: center;
-  padding: 34px 20px;
   background: #f7f7f7;
+  padding: 34px 20px;
+  text-align: center;
   font-size: 0.85rem;
   color: #666;
 }
