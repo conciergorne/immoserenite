@@ -1,56 +1,151 @@
-/* GENERAL */
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #fff;
+/* =================== */
+/* RESET PROPRE */
+/* =================== */
+* {
   margin: 0;
-  background: #111;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* HEADER */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+/* =================== */
+/* HEADER + MENU */
+/* =================== */
 .header {
-  position: relative;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
 
 .nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 25px;
-  font-weight: 500;
+.logo {
+  height: 42px;
 }
 
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover,
 .nav a.active {
   color: #caa24d;
 }
 
+/* BURGER MOBILE */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+.burger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px,5px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px,-6px);
+}
+
+.nav.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.98);
+  padding: 20px;
+}
+
+/* =================== */
 /* HERO */
+/* =================== */
+.hero {
+  width: 100%;
+  min-height: 70vh;
+  background: url("gestion.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 28, 12, 0.28);
+}
+
 .hero-overlay {
+  position: relative;
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(8px);
+  padding: 48px 28px;
   text-align: center;
-  margin-top: 60px;
+  max-width: 760px;
+  border-radius: 14px;
+  animation: fadeUp 1s ease forwards;
 }
 
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  color: #caa24d;
-  margin-bottom: 15px;
-}
-
-.hero-overlay p {
-  font-size: 1.1rem;
+.hero h1 {
   color: #fff;
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+  line-height: 1.25;
 }
 
-/* SERVICES GRID */
+.hero p {
+  color: #eaeaea;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* =================== */
+/* DESCRIPTION */
+.description {
+  max-width: 800px;
+  margin: 50px auto 70px auto;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* =================== */
+/* SERVICES / PACKS */
 .services {
   max-width: 1200px;
   margin: 70px auto;
@@ -61,7 +156,6 @@ body {
   text-align: center;
   margin-bottom: 45px;
   font-size: 1.85rem;
-  color: #caa24d;
 }
 
 .services-grid {
@@ -70,73 +164,97 @@ body {
   gap: 30px;
 }
 
+/* CARDS */
+.service-card {
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+  background: linear-gradient(145deg, #fffdf9, #fff8f2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.service-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.7s ease-out;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.14);
+}
+
 /* PACKS */
-.service-card.pack {
-  background: #111;
-  border-radius: 24px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+.pack {
+  border: 2px solid #caa24d;
+}
+
+.service-text {
   padding: 24px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.service-card.pack h3 {
-  color: #caa24d;
-}
-
-.service-card.pack:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-}
-
-/* SERVICES COMPLÉMENTAIRES */
-.service-card.complementary {
-  background: #222;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  padding: 20px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.service-card.complementary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
 .service-text h3 {
-  font-size: 1.25rem;
   margin-bottom: 10px;
-  color: #caa24d;
-}
-
-.service-text p {
-  font-size: 0.95rem;
-  color: #fff;
-  margin-bottom: 16px;
-  line-height: 1.5;
+  font-size: 1.25rem;
 }
 
 .service-text span {
   font-weight: 600;
   color: #caa24d;
+  display: block;
+  margin-bottom: 12px;
 }
+
+.service-text ul {
+  margin-bottom: 16px;
+}
+
+.service-text li {
+  margin-bottom: 8px;
 
 /* BOUTONS */
 .btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
   background: #caa24d;
-  color: #111;
-  border-radius: 6px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #b38f44;
+  background: #b18d3e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* RESPONSIVE */
-@media (max-width:768px) {
-  .services-grid { grid-template-columns: 1fr; }
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 34px 20px;
+  background: #f7f7f7;
+  font-size: 0.85rem;
+  color: #666;
 }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .burger { display: flex; }
+  .hero { min-height: 60vh; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-overlay { padding: 36px 22px; }
+  .services { margin: 55px auto; }
+  }
