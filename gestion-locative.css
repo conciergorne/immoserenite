@@ -1,4 +1,4 @@
-/* ================== HERO ================== */
+/* HERO */
 .hero {
   width: 100%;
   min-height: 70vh;
@@ -28,7 +28,7 @@
   line-height: 1.5;
 }
 
-/* ================== SERVICES ================== */
+/* SERVICES GRID */
 .services {
   max-width: 1200px;
   margin: 70px auto;
