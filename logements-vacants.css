@@ -170,7 +170,6 @@ html, body {
   text-decoration: none;
   color: inherit;
   box-shadow: 0 14px 40px rgba(0,0,0,0.08);
-  background: linear-gradient(145deg, #000, #111);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   opacity: 0;
   transform: translateY(30px);
@@ -189,6 +188,7 @@ html, body {
 
 /* PACKS */
 .pack {
+  background: linear-gradient(145deg, #000, #111);
   border: 2px solid #caa24d;
 }
 
@@ -236,6 +236,22 @@ html, body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* =================== */
+/* SERVICES COMPLÉMENTAIRES */
+.complementary-services .service-card {
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  border: 2px solid #555;
+}
+
+.complementary-services .service-text h3 {
+  color: #caa24d;
+}
+
+.complementary-services .service-text span,
+.complementary-services .service-text p {
+  color: #fff;
+}
+
 /* FOOTER */
 .footer {
   text-align: center;
@@ -259,4 +275,4 @@ html, body {
   .hero h1 { font-size: 1.8rem; }
   .hero-overlay { padding: 36px 22px; }
   .services { margin: 55px auto; }
-}
+  }
