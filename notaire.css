@@ -16,7 +16,7 @@ html, body {
 }
 
 /* =================== */
-/* HEADER + MENU */
+/* HEADER + MENU (comme autres pages) */
 /* =================== */
 .header {
   background: rgba(255,255,255,0.95);
@@ -69,7 +69,7 @@ html, body {
 }
 
 /* =================== */
-/* HERO */
+/* HERO avec notaire.png */
 .hero {
   width: 100%;
   min-height: 50vh;
@@ -188,4 +188,4 @@ html, body {
   .burger { display: flex; }
   .hero { min-height: 40vh; }
   .services { margin: 55px auto; }
-}
+  }
