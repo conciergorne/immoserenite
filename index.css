@@ -174,3 +174,31 @@
   .hero-overlay { padding: 36px 22px; }
   .services { margin: 55px auto; }
 }
+/* ================== MOBILE AJUSTÉ MENU ================== */
+@media (max-width: 768px) {
+  .nav-blocks {
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .nav-block {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+  }
+
+  .hero {
+    min-height: 55vh;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-overlay {
+    padding: 28px 18px;
+  }
+
+  .services {
+    margin: 40px auto;
