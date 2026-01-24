@@ -67,9 +67,10 @@ html, body {
 }
 
 .legal-text {
-  color: #fff;
+  color: #ffffff;
   font-size: 1rem;
   line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 /* =================== */
