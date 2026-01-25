@@ -4,9 +4,15 @@ body {font-family:'Arial', sans-serif; line-height:1.6; color:#333;}
 a {text-decoration:none; color:white;}
 img {max-width:100%; height:auto; display:block;}
 
+/* HEADER */
+.header {width:100%; background:#222; padding:15px 10%; display:flex; align-items:center; justify-content:space-between;}
+.header .logo {height:50px;}
+.nav a {color:#fff; margin-left:25px; font-weight:bold; transition:0.3s;}
+.nav a:hover {color:#d4af37;}
+
 /* Hero */
-.hero {position:relative; text-align:center; background:#f5f5f5;}
-.hero-img {width:100%; height:auto;}
+.hero {position:relative; text-align:center; background:#f5f5f5; padding:50px 10%;}
+.hero-img {width:100%; border-radius:8px;}
 .hero-text {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#fff; text-shadow:0 2px 8px rgba(0,0,0,0.6);}
 .hero-text h1 {font-size:2.5rem; margin-bottom:10px;}
 .geo {font-size:1.2rem; margin-bottom:20px;}
@@ -14,23 +20,24 @@ img {max-width:100%; height:auto; display:block;}
 .btn-hero:hover {background:#b38f20;}
 
 /* Sections */
-.section {padding:60px 10%; display:flex; justify-content:center; align-items:center; flex-wrap:wrap;}
-.section-content {display:flex; align-items:center; gap:40px; flex-wrap:wrap;}
-.section-content.reverse {flex-direction:row-reverse;}
-.section-img {flex:1; min-width:300px;}
-.section-text {flex:1; min-width:300px;}
-.section-text h2 {font-size:2rem; margin-bottom:15px;}
-.section-text p {margin-bottom:20px;}
-.btn {background:#d4af37; padding:12px 25px; border-radius:8px; font-weight:bold; display:inline-block; transition:0.3s;}
+.section {padding:60px 10%; background:#f9f9f9; margin-bottom:20px; border-radius:10px;}
+.section-header {text-align:center; margin-bottom:40px;}
+.section-header h2 {font-size:2rem; margin-bottom:10px;}
+.section-header p {font-size:1.1rem; color:#555;}
+.cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.card {background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); width:300px; text-align:center;}
+.card h3 {margin:15px 0 10px;}
+.card p {font-size:0.95rem; margin-bottom:10px;}
+.card span {display:block; margin-bottom:15px; font-weight:bold; color:#d4af37;}
+.btn {background:#d4af37; padding:10px 20px; border-radius:8px; font-weight:bold; display:inline-block; transition:0.3s;}
 .btn:hover {background:#b38f20;}
 
-/* Contact Section */
-.contact {flex-direction:column; text-align:center;}
-.contact-info {margin-top:20px; font-size:1rem;}
+/* Contact */
+.contact-info {margin-top:20px; text-align:center; font-size:1rem;}
 
 /* Footer */
 footer {text-align:center; padding:20px; background:#222; color:#fff; margin-top:40px;}
 
 /* Responsive */
-@media(max-width:900px){.section-content{flex-direction:column; text-align:center;}}
+@media(max-width:900px){.cards{flex-direction:column; align-items:center;}}
 @media(max-width:500px){.hero-text h1{font-size:1.8rem;}}
