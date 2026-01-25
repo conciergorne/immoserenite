@@ -8,6 +8,7 @@ a {text-decoration:none;}
 .header .logo {height:50px;}
 
 /* HERO */
+/* HERO */
 .hero {position:relative; text-align:center;}
 .hero-img {width:100%; max-height:450px; object-fit:cover; display:block;}
 .hero::after {
@@ -16,27 +17,29 @@ a {text-decoration:none;}
   top:0; left:0;
   width:100%; height:100%;
   background:rgba(0,0,0,0.25); /* overlay léger */
+  z-index:1;
 }
 .hero-text {
   position:absolute;
-  top:50%; /* centré verticalement */
+  top:50%;
   left:50%;
   transform:translate(-50%,-50%);
   text-align:center;
   padding:0 20px;
+  z-index:2; /* texte au-dessus de l’overlay */
 }
 .hero-text .main-title {
   font-family:'Georgia', serif;
   font-size:2.2rem;
   font-weight:bold;
-  color:#004b87; /* bleu logo */
+  color:#004b87 !important; /* bleu logo */
   text-shadow:0 2px 8px rgba(0,0,0,0.5);
   margin-bottom:12px;
 }
 .hero-text .subtitle {
   font-size:1.1rem;
   font-weight:bold;
-  color:#d4af37; /* jaune logo */
+  color:#d4af37 !important; /* jaune logo */
   text-shadow:0 2px 6px rgba(0,0,0,0.5);
 }
 
