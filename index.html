@@ -4,10 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ImmoSérénité – Gestion et accompagnement de vos biens</title>
-  <meta name="description" content="ImmoSérénité accompagne particuliers, agents, investisseurs et notaires dans la gestion de leurs biens immobiliers dans un rayon de 150 km autour de Bagnoles-de-l'Orne : Alençon, Le Mans, Caen, Laval, Fougères.">
+  <meta name="description" content="ImmoSérénité accompagne particuliers, agents, investisseurs et notaires dans la gestion de leurs biens immobiliers autour de Bagnoles-de-l'Orne.">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <img src="logo1.png" alt="Logo ImmoSérénité" class="logo">
+      <nav class="nav">
+        <a href="#particuliers">Particuliers</a>
+        <a href="#agents">Agents & Investisseurs</a>
+        <a href="#notaires">Notaires</a>
+        <a href="#devis">Devis</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
@@ -21,50 +34,79 @@
 
   <!-- SECTION 1 : PARTICULIERS -->
   <section class="section" id="particuliers">
-    <div class="section-content">
-      <img src="vacant.png" alt="Services pour particuliers" class="section-img">
-      <div class="section-text">
-        <h2>Services pour particuliers</h2>
-        <p>Gérez votre bien en toute sérénité grâce à nos packs simples et services à la carte, 100 % légaux et pensés pour faciliter votre quotidien dans un rayon de 150 km autour de Bagnoles-de-l'Orne.</p>
-        <a href="particuliers.html" class="btn">Voir nos packs</a>
+    <div class="section-header">
+      <h2>Services pour particuliers</h2>
+      <p>Gérez votre bien en toute sérénité grâce à nos packs simples et services à la carte, 100 % légaux et pensés pour faciliter votre quotidien.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="vacant.png" alt="Suivi de logement vacant">
+        <h3>Gestion logement vacant</h3>
+        <p>Surveillance, coordination des réparations et états des lieux avec le locataire, tout en restant 100% légal.</p>
+        <span>À partir de 30€ / intervention</span>
+        <a href="particuliers.html" class="btn">Voir le pack</a>
+      </div>
+      <div class="card">
+        <img src="vacant.png" alt="Accompagnement administratif">
+        <h3>Accompagnement administratif</h3>
+        <p>Aide dans la gestion administrative et organisationnelle de vos biens.</p>
+        <span>À partir de 25€ / intervention</span>
+        <a href="particuliers.html" class="btn">Voir le pack</a>
       </div>
     </div>
   </section>
 
   <!-- SECTION 2 : AGENTS & INVESTISSEURS -->
   <section class="section" id="agents">
-    <div class="section-content reverse">
-      <img src="gestion.png" alt="Services pour agents et investisseurs" class="section-img">
-      <div class="section-text">
-        <h2>Services pour agents immobiliers et investisseurs</h2>
-        <p>Optimisez la gestion de vos biens et gagnez du temps avec nos packs ultra-prémium et services à la carte, entièrement légaux et adaptés aux professionnels intervenant autour de Bagnoles-de-l'Orne (Alençon, Le Mans, Caen, Laval, Fougères...).</p>
-        <a href="agents-investisseurs.html" class="btn">Voir nos packs</a>
+    <div class="section-header">
+      <h2>Services pour agents immobiliers et investisseurs</h2>
+      <p>Optimisez la gestion de vos biens et gagnez du temps avec nos packs ultra-prémium et services à la carte, entièrement légaux et adaptés aux professionnels.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="gestion.png" alt="Gestion locative">
+        <h3>Pack Ultra-Prémium</h3>
+        <p>Coordination complète des biens, visites, états des lieux avec le locataire, reporting et maintenance.</p>
+        <span>Sur devis</span>
+        <a href="agents-investisseurs.html" class="btn">Voir le pack</a>
+      </div>
+      <div class="card">
+        <img src="gestion.png" alt="Services à la carte">
+        <h3>Services à la carte</h3>
+        <p>Inventaires, interventions ponctuelles, coordination prestataires, tout en respectant la légalité.</p>
+        <span>À partir de 50€ / intervention</span>
+        <a href="agents-investisseurs.html" class="btn">Voir le pack</a>
       </div>
     </div>
   </section>
 
   <!-- SECTION 3 : NOTAIRES / SUCCESSIONS -->
   <section class="section" id="notaires">
-    <div class="section-content">
-      <img src="notaire.png" alt="Services pour notaires et successions" class="section-img">
-      <div class="section-text">
-        <h2>Notaires & Successions</h2>
-        <p>Accompagnement administratif et organisationnel pour vos dossiers de succession, 100 % légal, dans un rayon de 150 km autour de Bagnoles-de-l'Orne.</p>
-        <a href="notaire.html" class="btn">Voir nos packs</a>
+    <div class="section-header">
+      <h2>Notaires & Successions</h2>
+      <p>Accompagnement administratif et organisationnel pour vos dossiers de succession, 100 % légal.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="notaire.png" alt="Services Notaire">
+        <h3>Packs Notaire</h3>
+        <p>Gestion administrative, inventaires et coordination des biens pour les dossiers de succession.</p>
+        <span>À partir de 40€ / intervention</span>
+        <a href="notaire.html" class="btn">Voir le pack</a>
       </div>
     </div>
   </section>
 
   <!-- SECTION 4 : DEVIS & CONTACT -->
   <section class="section" id="devis">
-    <div class="section-content contact">
+    <div class="section-header">
       <h2>Demande de devis & Contact</h2>
       <p>Choisissez vos services et contactez-nous directement pour un devis personnalisé.</p>
       <a href="devis.html" class="btn">Demande de devis</a>
-      <div class="contact-info">
-        <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
-        <p><strong>Email :</strong> contact@immoserenite.fr</p>
-      </div>
+    </div>
+    <div class="contact-info">
+      <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
+      <p><strong>Email :</strong> contact@immoserenite.fr</p>
     </div>
   </section>
 
@@ -75,4 +117,4 @@
 
   <script src="gestion-locative.js"></script>
 </body>
-</html>
+  </html>
