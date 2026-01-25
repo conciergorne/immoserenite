@@ -4,10 +4,16 @@ body {font-family:'Arial', sans-serif; color:#333; line-height:1.6;}
 a {text-decoration:none;}
 
 /* HEADER */
-.header {width:100%; padding:15px 10%; background:#fff; display:flex; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.header {
+  width:100%;
+  padding:15px 10%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
 .header .logo {height:50px;}
 
-/* HERO */
 /* HERO */
 .hero {position:relative; text-align:center;}
 .hero-img {width:100%; max-height:450px; object-fit:cover; display:block;}
@@ -16,7 +22,7 @@ a {text-decoration:none;}
   position:absolute;
   top:0; left:0;
   width:100%; height:100%;
-  background:rgba(0,0,0,0.25); /* overlay léger */
+  background:rgba(0,0,0,0.25);
   z-index:1;
 }
 .hero-text {
@@ -26,7 +32,7 @@ a {text-decoration:none;}
   transform:translate(-50%,-50%);
   text-align:center;
   padding:0 20px;
-  z-index:2; /* texte au-dessus de l’overlay */
+  z-index:2;
 }
 .hero-text .main-title {
   font-family:'Georgia', serif;
@@ -56,12 +62,12 @@ a {text-decoration:none;}
 
 /* SECTIONS */
 .section {padding:50px 10%; display:flex; justify-content:center;}
-.section:nth-child(even) {background:#f9f9f9;} /* alternance gris/blanc */
+.section:nth-child(even) {background:#f9f9f9;}
 
 .card {
   background:#fff;
   border-radius:15px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.15); /* ombre premium */
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
   overflow:hidden;
   max-width:900px;
   width:100%;
@@ -79,10 +85,11 @@ a {text-decoration:none;}
 .card-text {padding:25px; flex:1;}
 .card-text h2 {margin-bottom:10px; font-size:1.5rem;}
 .card-text p {margin-bottom:15px; font-size:1rem;}
+
 .btn {
   display:inline-block;
   padding:12px 25px;
-  background:#004b87; /* bleu logo */
+  background:#004b87;
   color:#fff;
   border-radius:8px;
   font-weight:bold;
@@ -105,4 +112,4 @@ footer{text-align:center; padding:20px; background:#222; color:#fff; margin-top:
 @media(max-width:500px){
   .hero-text .main-title {font-size:1.6rem;}
   .hero-text .subtitle {font-size:0.95rem;}
-  }
+    }
